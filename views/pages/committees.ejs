@@ -44,7 +44,7 @@ committees = [
     title: "Co-Organizing Secretary",
     members: [
       "Dr. Pardeep Kumar, YDoE, Punjabi University, Talwandi Sabo",
-      "Dr. Rajvir Kaur Sraw, GNDEC Ludhaina"
+      "Dr. Rajvir Kaur Sraw, GNDEC Ludhiana"
     ]
   },
   {
@@ -65,13 +65,14 @@ committees = [
 ];
 %>
 
-<section class="bg-base-100 md:w-2/3 mx-auto py-16">
-  <div class="text-center mb-12">
+<section class="bg-base-100 py-12 md:py-16">
+  <div class="container mx-auto px-4 md:max-w-5xl">
+  <div class="text-center mb-10">
     <%- include('../components/section_title', { text: 'Organizing Committee', level: "h2" }) %>
   </div>
-  <div class="flex flex-col gap-8 px-4">
+  <div class="grid md:grid-cols-2 gap-6">
     <% for (let index = 0; index < committees.length; index++) { %>
-    <div>
+    <article class="bg-secondary/10 p-4 border border-secondary/20">
       <h3 class="text-h6 text-secondary font-montserrat font-bold leading-tight mb-4">
         <%= committees[index].title %>
       </h3>
@@ -81,7 +82,8 @@ committees = [
         <%= committees[index].members[i] %>
       </p>
       <% } %>
-    </div>
+    </article>
     <% } %>
+  </div>
   </div>
 </section>

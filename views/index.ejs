@@ -17,10 +17,10 @@
   <link rel="manifest" href="favicon/site.webmanifest">
 </head>
 
-<body class="font-medium text-justify">
-  <div class="relative">
-    <img src="/images/cse.jpg" alt="Background" class="absolute inset-0 w-full h-full object-cover object-[center_top_55%]">
-    <div class="relative z-10">
+<body class="font-medium text-justify text-body">
+  <div class="relative ">
+    <img src="/images/background.jpg" alt="Background" class="absolute inset-0 w-full h-full object-cover opacity-40 blur-lg object-bottom">
+    <div class="relative  z-10">
       <%- include('components/navbar') %>
     </div>
   </div>
@@ -30,30 +30,31 @@
   </div>
 
   <!-- Footer -->
-  <footer class="bg-linear-to-br from-secondary to-secondary/20 text-secondary-content mt-auto">
+  <footer class="bg-neutral text-neutral-content mt-auto">
     <div class="container mx-auto px-4 py-12 flex flex-col md:flex-row gap-8 items-center">
       <div class="text-center md:text-left md:flex-2">
         <div class="flex items-center justify-center md:justify-start gap-4 mb-6">
+          <%- include('components/logo', { source: '/images/logo.png' }) %>
           <%- include('components/logo', { source: '/images/college_logo.png' }) %>
-          <%- include('components/logo', { source: '/images/nitdel.png' }) %>
+          <%- include('components/logo', { source: '/images/somme.jpeg' }) %>
         </div>
 
-        <h3 class="text-h2 font-black font-montserrat mb-4">
-          ICCT-SD 2026
+        <h3 class="text-h4 font-black font-montserrat mb-4">
+          AFTMME 2026
         </h3>
 
         <div class="space-y-4">
           <div>
             <h5 class="text-small opacity-80 mb-2">Organised by</h5>
             <h3 class="text-h5 font-semibold font-montserrat">
-              Department of Computer Science and Engineering<br>GNDEC, Ludhiana
+              Society of Materials and Mechanical Engineers<br>and Guru Nanak Dev Engineering College, Ludhiana
             </h3>
           </div>
 
           <div>
-            <h5 class="text-small opacity-80 mb-2">In collaboration with</h5>
+            <h5 class="text-small opacity-80 mb-2">Conference</h5>
             <h3 class="text-h5 font-semibold font-montserrat">
-              Department of Computer Science and Engineering<br>NIT Delhi
+              12th International Conference on Advancements and Futuristic Trends in Mechanical and Materials Engineering
             </h3>
           </div>
         </div>
@@ -64,13 +65,13 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
-            <span>Gill Park, Gill Road, Ludhiana, Punjab 141006, India</span>
+            <span class="text-body">Gill Park, Gill Road, Ludhiana, Punjab 141006, India</span>
           </div>
           <div class="flex items-center justify-center md:justify-start gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
-            <span>icctsd26@gmail.com</span>
+            <span class="text-body">AFTMME 2026, 19-20 November, 2026</span>
           </div>
         </div>
       </div>
@@ -81,11 +82,11 @@
           <iframe class="h-full w-full" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6849.854876332422!2d75.8571052!3d30.8607065!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a828f09011b15%3A0xbf3f5b51dcc81b12!2sGuru%20Nanak%20Dev%20Engineering%20College!5e0!3m2!1sen!2sin!4v1762316832403!5m2!1sen!2sin" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="mt-4 text-center">
-          <a href="https://maps.google.com/?q=Guru+Nanak+Dev+Engineering+College+Ludhiana" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-white/20 hover:bg-white/30  transition-all duration-300 text-small font-semibold">
+          <a href="https://maps.google.com/?q=Guru+Nanak+Dev+Engineering+College+Ludhiana" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-white/15 hover:bg-white/25 transition-all duration-300 text-small font-semibold">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
-            Open in Google Maps
+            <span class="text-body">Open in Google Maps</span>
           </a>
         </div>
       </div>
@@ -93,8 +94,8 @@
 
     <div class="border-t border-white/20 py-4">
       <div class="container mx-auto px-4 text-center">
-        <p class="text-small font-bold">
-          © Copyright <%= new Date().getFullYear() %>, GNDEC, NIT. All rights reserved.
+        <p class="text-body text-small font-bold">
+          &copy; Copyright <%= new Date().getFullYear() %>, GNDEC and SOMME. All rights reserved.
         </p>
       </div>
     </div>

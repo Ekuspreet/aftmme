@@ -47,39 +47,50 @@
   {
     track: "AI & Machine Learning in Materials Science",
     topics: [
-      "Al-Driven Materials Discovery and Design",
+      "AI-Driven Materials Discovery and Design",
       "Machine Learning for Predicting Material Properties",
-      "Alin Manufacturing Process Optimization",
+      "AI in Manufacturing Process Optimization",
       "Deep Learning for Materials Failure Prediction and Analysis",
       "Data-Driven Approaches in Materials Engineering",
-      "Al-Assisted Design and Testing of Advanced Materials for Sensors and Construction",
+      "AI-Assisted Design and Testing of Advanced Materials for Sensors and Construction",
       "Sensors for Industrial Applications",
       "Construction and Building Materials",
       "Advanced Surveying Materials",
       "Bulk Construction Materials"
     ]
   },
-]; %>
+];
 
-<section class="bg-base-100 md:w-2/3 mx-auto py-16  gap-12">
-  <div class="text-center mb-12">
-    <%- include('../components/section_title', { text: 'Conference Tracks', level: "h2" }) %>
-  </div>
-  <div class="grid md:grid-cols-2  gap-8">
-    <% for (let index = 0; index < tracks.length; index++) { %>
-    <div class="px-4  bg-secondary/10 p-4">
-      <div class="text-center mb-4">
-        <h3 class="text-h6 text-secondary font-montserrat font-bold leading-tight">
-          <%= tracks[index].track %>
-        </h3>
+submission_links = [
+  { label: "Online Abstract Submission", href: "https://forms.gle/tciEuiCpBg3o4dWA8" },
+  { label: "Online Manuscript Submission", href: "https://forms.gle/T2D1m4yqLJN3muPv6" },
+  { label: "Abstract Template", href: "https://tinyurl.com/aftmme26-template-abstract" },
+  { label: "Manuscript Template", href: "https://tinyurl.com/aftmme26-template-manuscript" }
+];
+%>
+
+<section class="bg-base-100 py-12 md:py-16">
+  <div class="container mx-auto px-4 md:max-w-5xl">
+    <div class="text-center mb-10">
+      <%- include('../components/section_title', { text: 'Conference Themes', level: "h2" }) %>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <% for (let index = 0; index < tracks.length; index++) { %>
+      <div class="bg-secondary/10 p-4 border border-secondary/20">
+        <div class="text-center mb-4">
+          <h3 class="text-h6 text-secondary font-montserrat font-bold leading-tight">
+            <%= tracks[index].track %>
+          </h3>
+        </div>
+
+        <% for (let i = 0; i < tracks[index].topics.length; i++) { %>
+        <p class="text-justify bg-base-100 p-4 text-base-content/90 text-body border border-base-200">
+          <%= tracks[index].topics[i] %>
+        </p>
+        <% } %>
       </div>
-
-      <% for (let i = 0; i < tracks[index].topics.length; i++) { %>
-      <p class="text-justify bg-base-100 p-4 text-base-content/90 text-body border border-base-200">
-        <%= tracks[index].topics[i] %>
-      </p>
       <% } %>
     </div>
-    <% } %>
   </div>
 </section>

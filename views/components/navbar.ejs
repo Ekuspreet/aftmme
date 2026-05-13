@@ -1,49 +1,37 @@
 <% if (typeof navLinks === 'undefined') { navLinks = []; } %>
 
-<!-- Container flex only for md and above -->
-<div class=" bg-secondary/50 text-secondary-content md:p-4">
-  <!-- Container -->
-  <div class="flex justify-evenly md:hidden pt-2">
-    <span>
-      <%- include('logo', { source: '/images/college_logo.png' }) %>
-    </span>
-    <span>
-      <%- include('logo', { source: '/images/nitdel.png' }) %>
-    </span>
-  </div>
+<header class="bg-base-100/95 text-base-content border-b border-secondary/20 shadow-sm">
+  <div class="container mx-auto px-3 py-3 md:px-4 md:py-5">
+    <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+      <div class="flex items-center justify-center gap-2 rounded-lg bg-white/95 p-2 shadow-sm ring-1 ring-secondary/15 lg:justify-start">
+        <%- include('logo', { source: '/images/logo.png' }) %>
+        <%- include('logo', { source: '/images/college_logo.png' }) %>
+        <%- include('logo', { source: '/images/somme.jpeg' }) %>
+      </div>
 
-  <div class="flex flex-col md:flex-row md:items-center ">
-
-    <!-- Left logo -->
-    <div class="hidden md:flex  md:flex-1 ">
-      <%- include('logo', { source: '/images/college_logo.png' }) %>
-    </div>
-
-    <!-- Name: centered explicitly on md+ -->
-    <div class="text-center font-bold text-h3  md:w-2/3 md:mt-0 mt-4 leading-tight flex flex-col items-center ">
-      <!-- Advancements and Futuristic Trends in Mechanical and Materials Engineering -->
-      <span class="text-h5 "> 12<sup>th</sup> International Conference</span> <span class="text-h6">on</span> Advancements and Futuristic Trends in Mechanical and Materials Engineering(AFTMME)
-      <br>
-      <span class="text-h5 font-montserrat">
-        19<sup>th</sup> –20<sup>th</sup> November, 2026
-      </span>
-
-    </div>
-
-    <!-- Right logo -->
-    <div class="hidden md:flex  md:flex-1">
-      <%- include('logo', { source: '/images/nitdel.png' }) %>
+      <div class="text-center lg:text-right lg:max-w-4xl">
+        <p class="text-body font-montserrat font-bold uppercase tracking-wide text-secondary">
+          12<sup>th</sup> International Conference
+        </p>
+        <h1 class="font-montserrat text-h4 md:text-h3 font-black leading-tight text-base-content">
+          Advancements and Futuristic Trends in Mechanical and Materials Engineering
+        </h1>
+        <div class="mt-2 flex flex-wrap items-center justify-center gap-2 text-body font-semibold text-base-content/75 lg:justify-end">
+          <span>AFTMME 2026</span>
+          <span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
+          <span>19<sup>th</sup>-20<sup>th</sup> November, 2026</span>
+          <span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
+          <span>GNDEC Ludhiana</span>
+        </div>
+      </div>
     </div>
   </div>
 
-
-</div>
-
-
-
-<div id="navbar" class="flex flex-wrap bg-secondary/50 justify-center gap-2 pt-6 pb-2  ">
-  <% for( let index=0; index < navLinks.length; index++ ) { %>
-  <%- include('navlink', { label: navLinks[index].label, url: navLinks[index].url }) %>
-  <% } %>
-
-</div>
+  <nav id="navbar" class="border-t border-secondary/15 bg-secondary/10">
+    <div class="container mx-auto flex flex-wrap justify-center gap-2 px-3 py-3">
+      <% for( let index=0; index < navLinks.length; index++ ) { %>
+      <%- include('navlink', { label: navLinks[index].label, url: navLinks[index].url, isActive: navLinks[index].url === activeUrl }) %>
+      <% } %>
+    </div>
+  </nav>
+</header>

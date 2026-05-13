@@ -7,6 +7,7 @@ for (const pageConfig of PAGES_ARRAY) {
     res.render("index", {
       title: pageConfig.title,
       page: pageConfig.viewFile,
+      activeUrl: pageConfig.path,
       static: false,
       navLinks: PAGES_ARRAY.map((p) => ({
         label: p.navLabel,

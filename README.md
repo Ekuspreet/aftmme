@@ -1,2 +1,2 @@
-# icct-sd-26-web
-A Website for International Conference on Intelligent Computational and Communication Technologies for Sustainable Developement (ICCT-SD 26)
+# aftmme-2026-web
+A website for the 12th International Conference on Advancements and Futuristic Trends in Mechanical and Materials Engineering (AFTMME 2026).

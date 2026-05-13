@@ -1,14 +1,14 @@
 {
-  "name": "icct-sd-26-web",
+  "name": "aftmme-2026-web",
   "version": "1.0.0",
-  "description": "A Website for International Conference on Intelligent Computational and Communication Technologies for Sustainable Developement (ICCT-SD 26)",
-  "homepage": "https://github.com/Ekuspreet/icct-sd-26-web#readme",
+  "description": "A website for the 12th International Conference on Advancements and Futuristic Trends in Mechanical and Materials Engineering (AFTMME 2026)",
+  "homepage": "https://github.com/Ekuspreet/aftmme-2026-web#readme",
   "bugs": {
-    "url": "https://github.com/Ekuspreet/icct-sd-26-web/issues"
+    "url": "https://github.com/Ekuspreet/aftmme-2026-web/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ekuspreet/icct-sd-26-web.git"
+    "url": "git+https://github.com/Ekuspreet/aftmme-2026-web.git"
   },
   "license": "ISC",
   "author": "",
@@ -18,7 +18,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
     "tailwind": "npx @tailwindcss/cli -i ./public/css/input.css -o ./public/css/output.css --watch",
-    "build": " npx @tailwindcss/cli -i ./public/css/input.css -o ./public/css/output.css && node scripts/build.js"
+    "build": " npx @tailwindcss/cli -i ./public/css/input.css -o ./public/css/output.css && node scripts/build.js",
+    "deploy": "node scripts/deploy.js"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.14",

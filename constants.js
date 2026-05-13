@@ -65,7 +65,7 @@ export const PAGES = {
     ACCOMMODATION: {
         name: "accomodation",
         path: "/accomodation",
-        title: "Accomodation",
+        title: "Accommodation",
         viewFile: "accomodation",
         navLabel: "Accommodation",
     },

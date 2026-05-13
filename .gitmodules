@@ -1,0 +1,3 @@
+[submodule "aftmme-web"]
+	path = aftmme-web
+	url = https://github.com/Ekuspreet/aftmme-web.git

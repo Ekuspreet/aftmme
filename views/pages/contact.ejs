@@ -1,102 +1,32 @@
-<% 
-    conference_details = {
-        "convenor" : {
-            name : "Dr. Vivek Thapar",
-            designation : "Associate Professor, Department of Computer Science and Engineering, GNDEC, Ludhiana",
-            phone : "+91-98777-09054"
-        },
-        "organising_secretary" : [
-        {
-            name : "Dr. Sita Rani",
-            designation : "Assistant Professor, Department of Computer Science and Engineering, GNDEC, Ludhiana",
-            phone : "+91-75080-08004"
-        }, 
-        {
-            name : "Dr. Priyanka Arora",
-            designation : "Assistant Professor, Department of Computer Science and Engineering, GNDEC, Ludhiana",
-            phone : "+91-98888-99029"
-        },
-        {
-          name : "Dr. Amandeep Kaur",
-          designation : "Assistant Professor, Department of Computer Science and Engineering, NIT Delhi",
-          email: "amandeepk@nitdelhi.ac.in"
-        },
-        {
-          name : "Dr. Sahil",
-          designation : "Assistant Professor, Department of Computer Science and Engineering, NIT Delhi",
-          email: "sahil.neelam@nitdelhi.ac.in"
-        }
-        ],
-        "grievance_redressal" : "icctsd26@gmail.com"
-    }
+<%
+contacts = [
+  { name: "Dr. Rakesh Bhatia", role: "Organizing Secretary", phone: "+91-9988096160" },
+  { name: "Dr. Chamkaur Jindal", role: "Organizing Secretary", phone: "+91-8427666994" },
+  { name: "Dr. Raman Kumar Sehgal", role: "Organizing Secretary", phone: "+91-9855100530" },
+  { name: "Dr. Pardeep Kumar", role: "Co-organizing Secretary", phone: "+91-9463443524" },
+  { name: "Er. Lakhveer Singh Khana", role: "Co-organizing Secretary", phone: "+91-9464663313" }
+];
 %>
 
-
-<!-- contact_us.ejs -->
-
-<section class="pt-10 mx-auto px-4 md:max-w-2/3">
-  <div class="text-center ">
+<section class="bg-base-100 py-12 md:py-16">
+  <div class="container mx-auto px-4 md:max-w-5xl">
+  <div class="text-center">
     <%- include('../components/section_title', { text: 'Contact', level: 'h2' }) %>
     <p class="text-center text-body">
-      Reach out to the organizing committee of ICCT-SD 2026 for queries, collaborations, or support.
+      For further information regarding abstract submission, full paper submission, and registration, kindly contact:
     </p>
   </div>
-</section>
 
-<div class="divider"></div>
-
-<section class="bg-base-100 py-16">
-  <div class="container mx-auto px-4 md:max-w-2/3 grid grid-cols-1 md:grid-cols-2 gap-12">
-
-    <!-- Convenor -->
-    <div class="bg-white p-6  md:col-span-2 shadow-md border border-secondary/30">
-      <h2 class="text-h3 font-semibold  text-secondary font-montserrat mb-4">Convenor</h2>
-      <p class="font-semibold text-base-content/90"><strong>Name:</strong> <%= conference_details.convenor.name %></p>
-      <p class="text-base-content/80"><strong>Designation:</strong> <%= conference_details.convenor.designation %></p>
-      <p class="text-base-content/80"><strong>Phone:</strong> <a href="tel:<%= conference_details.convenor.phone %>" class="link link-secondary"><%= conference_details.convenor.phone %></a></p>
-    </div>
-
-    <!-- Grievance Redressal -->
-
-
-    <!-- Organising Secretaries -->
-    <% conference_details.organising_secretary.forEach(function(secretary){ %>
-    <div class="bg-white p-6  shadow-md border border-secondary/30">
-      <h2 class="text-h3 font-semibold text-secondary font-montserrat mb-4">Organising Secretary</h2>
-
-      <p class="font-semibold text-base-content/90">
-        <strong>Name:</strong> <%= secretary.name %>
-      </p>
-
-      <p class="text-base-content/80">
-        <strong>Designation:</strong> <%= secretary.designation %>
-      </p>
-
-      <% if (secretary.phone) { %>
-      <p class="text-base-content/80">
-        <strong>Phone:</strong>
-        <a href="tel:<%= secretary.phone %>" class="link link-secondary">
-          <%= secretary.phone %>
-        </a>
-      </p>
-      <% } %>
-
-      <% if (secretary.email) { %>
-      <p class="text-base-content/80">
-        <strong>Email:</strong>
-        <a href="mailto:<%= secretary.email %>" class="link link-secondary">
-          <%= secretary.email %>
-        </a>
-      </p>
-      <% } %>
-
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+    <% contacts.forEach(function(person){ %>
+    <div class="bg-secondary/10 p-4 border border-secondary/30">
+      <h2 class="text-h6 font-semibold text-secondary font-montserrat mb-4"><%= person.role %></h2>
+      <div class="bg-base-100 p-4">
+        <p class="text-body font-semibold text-base-content/90"><strong>Name:</strong> <%= person.name %></p>
+        <p class="text-body text-base-content/80"><strong>Phone:</strong> <a href="tel:<%= person.phone %>" class="link link-secondary"><%= person.phone %></a></p>
+      </div>
     </div>
     <% }) %>
-
-
+  </div>
   </div>
 </section>
-
-<div class="font-body text-h6 text-center mt-2 mb-10 font-montserrat">For any inquiries or grievances, kindly email us at <span class="link link-secondary">
-    <a href="mailto:<%= conference_details.grievance_redressal %>">
-      <%= conference_details.grievance_redressal %> </a> </span> </div>
