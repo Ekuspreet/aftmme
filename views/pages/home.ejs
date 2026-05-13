@@ -1,0 +1,363 @@
+<!-- Hero Section -->
+<span>
+  <%
+dates = [
+  {
+    date: '<s>09-02-2026</s> <span class="text-error font-bold">Submission Closed</span>',
+    event: 'Submission of Full Paper',
+    calendar_link:
+      'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Submission+of+Full+Paper&dates=20260209/20260210&details=Submit+your+full+paper+for+ICCT-SD+2026&sf=true&output=xml'
+  },
+  {
+    date: 'upto 16-02-2026',
+    event: 'Acceptance Notification',
+    calendar_link:
+      'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Acceptance+Notification&dates=20260216/20260217&details=Check+notification+of+acceptance+for+ICCT-SD+2026&sf=true&output=xml'
+  },
+  {
+    date: '<s>18-02-2026</s>  <span class="text-error font-bold">Registration Closed</span>',
+    event: 'Registration Deadline',
+    calendar_link:
+      'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Registration+Deadline&dates=20260218/20260219&details=Register+for+ICCT-SD+2026&sf=true&output=xml'
+  },
+  {
+    date: '21-02-2026',
+    event: 'Camera Ready Paper',
+    calendar_link:
+      'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Camera+Ready+Paper&dates=20260221/20260222&details=Submit+camera+ready+paper+for+ICCT-SD+2026&sf=true&output=xml'
+  }
+]
+%>
+
+</span>
+<span>
+  <% ludhiana_images=[ {
+        src: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmir-s3-cdn-cf.behance.net%2Fproject_modules%2F1400%2F5e1f9431585181.5657226f60b6d.jpg"
+        , alt: "Gurudwara Dukh Niwaran Sahib" }, { src: "https://i.ibb.co/JwX1mw2k/Clock-Tower.jpg" ,
+        alt: "Ludhiana Clock Tower" }, { src: "https://i.ibb.co/Kpf9cWkV/pau.webp" ,
+        alt: "Punjab Agricultural University" }, { src: "https://i.ibb.co/5g0xy57D/war-museum.jpg" ,
+        alt: "Maharaja Ranjit Singh War Museum" }, { src: "https://i.ibb.co/k6z6CtCR/sutlej.jpg" , alt: "Sutlej Bridge"
+        },{ src: "https://i.ibb.co/N2TQ4MS9/rose-garden.jpg" , alt: "Nehru Rose Garden" } ]; %>
+</span>
+<span>
+  <% ludhiana_places=[ { name: "Gurudwara Dukh Niwaran Sahib" ,
+        description: "A sacred Sikh shrine known for its peaceful atmosphere and historical importance." ,
+        mapLink: "https://maps.app.goo.gl/hszUZSotVya6fBsk8" }, { name: "Punjab Agricultural University Museum" ,
+        description: "A glimpse into Punjab’s rural heritage, traditional crafts, and agricultural evolution." ,
+        mapLink: "https://maps.app.goo.gl/EoDzQHtRTgR2Vbzr5" }, { name: "Nehru Rose Garden" ,
+        description: "A sprawling urban park home to over 1,600 varieties of roses, ideal for picnics and evening strolls."
+        , mapLink: "https://maps.app.goo.gl/1xJ6drTaX4AyEkuX6" }, { name: "Phillaur Fort" ,
+        description: "A historical fort built by Maharaja Ranjit Singh, showcasing Sikh military architecture and British influences."
+        , mapLink: "https://maps.app.goo.gl/nCQW2N6qiTGKD3GR7" }, { name: "Rakh Bagh Park" ,
+        description: "A beloved recreational spot featuring lush greenery, a toy train, and spaces for families to unwind."
+        , mapLink: "https://maps.app.goo.gl/2rfPbfK1Y4igGxfE9" }, { name: "Hardy’s World" ,
+        description: "Punjab’s famous amusement and water park, perfect for thrill-seekers and family fun." ,
+        mapLink: "https://maps.app.goo.gl/YrtGfzPwHV21QZ9r7" }]%>
+</span>
+
+<span>
+
+  <%
+  hotels_nearby = [
+{
+      name: "Radisson Blu Hotel",
+      link: "https://www.radissonhotels.com/en-us/hotels/radisson-blu-ludhiana"
+    },
+{
+      name: "Park Plaza",
+      link: "https://www.radissonhotels.com/en-us/hotels/park-plaza-ludhiana?cid=a%3Ase+b%3Agmb+c%3Aapac+i%3Alocal+e%3Apph+d%3Aind+h%3AINPBLUH1"
+    },
+{
+      name: "Hyatt Regency",
+      link: "https://www.hyatt.com/hyatt-regency/en-US/luhrl-hyatt-regency-ludhiana?src=corp_lclb_google_seo_luhrl&utm_source=google&utm_medium=organic&utm_campaign=lmr"
+    },
+]
+  %>
+</span>
+
+<span>
+  <% proceedings=[ { src : "/images/springer.jpeg" , alt : "Springer" }, { src: "/images/scopus.jpg" , alt: "Scopus" },
+    { src : "/images/crc.png" , alt : "CRC Press" }, { src: "/images/tech_science.png" , alt: "Tech Science" }        ] %>
+</span>
+
+<span>
+  <%
+  technical_partners = [
+  { src: "/images/csir.png", alt: "CSIR" },
+  { src: "/images/srseg.png", alt: "SIRG" },
+  { src: "/images/ieee.png", alt: "IEEE" },
+  { src: "/images/csi.png", alt: "CSI" },
+  { src: "/images/iei.png", alt: "IEI" },
+  { src: "/images/cmt.png", alt: "CMT" },
+    ];
+  %>
+</span>
+
+<span>
+  <%
+    how_to_reach = [
+      {
+        mode: "By Air",
+        location: "Chandigarh Airport",
+        map_element: '<iframe class = "w-full h-full" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d438947.805589755!2d75.9935846582233!3d30.738643079458043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x390fec8230a9dd53%3A0x42c6835dc358b53a!2sShaheed%20Bhagat%20Singh%20International%20Airport%2C%20Chandigarh%2C%20New%20Civil%20Air%20Terminal%20Chandigarh%20International%20Airport%2C%20Sahibzada%20Ajit%20Singh%20Nagar%2C%20Punjab%20140306!3m2!1d30.6679559!2d76.7860317!4m5!1s0x391a828f09011b15%3A0xbf3f5b51dcc81b12!2sGuru%20Nanak%20Dev%20Engineering%20College%2C%20Gill%20Road%2C%20Gill%20Park%2C%20Ludhiana%2C%20Punjab!3m2!1d30.860695399999997!2d75.8595665!5e0!3m2!1sen!2sin!4v1762454289654!5m2!1sen!2sin"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+      },
+      {
+        mode: "By Air",
+        location: "Amritsar Airport",
+        map_element: '<iframe class = "w-full h-full" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d436555.666613947!2d75.00359868120361!3d31.259739765110723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x39196609c25343eb%3A0x2284aab8b51ba16d!2sSri%20Guru%20Ram%20Dass%20Jee%20International%20Airport%2C%20Amritsar%2C%20opp.%20Hotel%20Blue%20Radison%2C%20Ajnala%20Rd%2C%20Raja%20Sansi%2C%20Punjab%20143101!3m2!1d31.7056203!2d74.8068644!4m5!1s0x391a828f09011b15%3A0xbf3f5b51dcc81b12!2sGNDEC%2C%20Gill%20Road%2C%20Gill%20Park%2C%20Ludhiana%2C%20Punjab!3m2!1d30.860695399999997!2d75.8595665!5e0!3m2!1sen!2sin!4v1762502046874!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+      },
+      {
+        mode: "By Train",
+        location: "Ludhiana Railway Station",
+        map_element: '<iframe class = "w-full h-full" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d27392.10456545141!2d75.83396331996556!3d30.88629534845253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x391a830e7f486865%3A0x478486e217c54656!2sLudhiana%20Railway%20Station%2C%20Kamla%20Nehru%20Market%2C%20Old%20Ludhiana%2C%20Ludhiana%2C%20Punjab!3m2!1d30.9112579!2d75.8505134!4m5!1s0x391a828f09011b15%3A0xbf3f5b51dcc81b12!2sGuru%20Nanak%20Dev%20Engineering%20College%2C%20Gill%20Road%2C%20Gill%20Park%2C%20Ludhiana%2C%20Punjab!3m2!1d30.860695399999997!2d75.8595665!5e0!3m2!1sen!2sin!4v1762454371029!5m2!1sen!2sin"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+      },
+      {
+        mode: "By Road",
+        location: "Ludhiana Bus Stand",
+        map_element: '<iframe class = "w-full h-full" src="https://www.google.com/maps/embed?pb=!1m24!1m8!1m3!1d27392.104579307434!2d75.8339633!3d30.8862953!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x391a83743e3d673f%3A0xcdf0a5ea49da56bb!2sBus%20stand%20ludhiana%2C%20VRWW%2BPC4%2C%20Sham%20Nagar%2C%20Jawaharnagar%2C%20Ludhiana%2C%20Punjab%20141002!3m2!1d30.8967615!2d75.8460719!4m5!1s0x391a828f09011b15%3A0xbf3f5b51dcc81b12!2sGuru%20Nanak%20Dev%20Engineering%20College%2C%20Gill%20Road%2C%20Gill%20Park%2C%20Ludhiana%2C%20Punjab!3m2!1d30.860695399999997!2d75.8595665!5e0!3m2!1sen!2sin!4v1762454625546!5m2!1sen!2sin"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+      },
+    ];
+  %>
+</span>
+
+
+<span>
+  <% about=[ " The International Conference on Intelligent Computational and Communication Technologies for Sustainable Development (ICCT-SD 2026) aims to bring together researchers, academicians, industry professionals, and policymakers to explore how emerging technologies can drive progress toward achieving the United Nations' Sustainable Development Goals (UN SDGs). The conference focuses on the intersection of intelligent computational methods, advanced communication technologies, and sustainable development, fostering collaboration and innovation in these critical areas."
+        , "The primary objective is to address global challenges related to physical and mental health, societal needs, conductive environment, and technological innovations in various fields by leveraging cutting-edge technologies like Artificial Intelligence, Machine Learning, Internet of Things (IoT), and Big Data Analytics. Participants will discuss and present research findings, case studies, and best practices that demonstrate how these technologies can be applied to create sustainable solutions."
+        , " By providing a platform for knowledge exchange and networking, the conference aims to inspire actionable insights and partnerships that contribute to the global agenda of sustainable development. The ICCT-SD seeks to catalyze technological innovations that align with the SDGs, ensuring that technological advancements benefit society at large and contribute to a more equitable, sustainable future. This conference is focused on the advanced technologies like Artificial Intelligence and Machine Learning, Internet of Things (IoT) and Smart Systems, Big Data Analytics and Cloud Computing, Next-Generation Network and Communication Technologies, Security and Privacy, and other Contemporary Technologies and their contribution in the various United Nations' Sustainable Development Goals."
+        ] %>
+
+  <% objectives = [
+  "Promote interdisciplinary research and innovation for sustainable development.",
+  "Provide a global platform to share research and best practices aligned with UN SDGs.",
+  "Foster academia–industry–policy collaborations on key challenges.",
+  "Encourage sustainable digital ecosystems and scalable solutions.",
+  "Inspire strategies and partnerships for real-world impact."
+] %>
+
+</span>
+<section class=" pt-10 bg-[#fafafa]">
+
+
+  <div class="divider"></div>
+
+  <div class="  md:md:max-w-2/3 mx-auto  my-10 ">
+    <div class="text-center ">
+      <%- include('../components/section_title', { text: 'Important Dates', level: 'h2' }) %>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 p-3 md:p-0">
+      <% for( let i=0; i < dates.length; ++i ) { %>
+      <div class="timeline-item  p-4 bg-gradient-to-br from-primary/5 to-secondary/5 ">
+        <div class="text-center flex flex-col items-center">
+          <div class="text-h5 font-black text-secondary">
+            <%- dates[i].event %>
+          </div>
+          <time class="font-montserrat text-h6 font-medium">
+            <%- dates[i].date %>
+          </time>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+
+  <!-- Countdown Section -->
+
+
+  <script>
+    // Set the conference date (adjust as needed)
+    const conferenceDate = new Date('2026-04-01T09:00:00').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = conferenceDate - now;
+
+      if (distance < 0) {
+        document.getElementById('countdown').innerHTML = '<p class="text-h3 font-bold text-secondary">The Conference Has Started!</p>';
+        return;
+      }
+
+      // Calculate time units
+      const months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30.44));
+      const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Update the countdown display
+      document.getElementById('months').textContent = months;
+      document.getElementById('days').textContent = days;
+      document.getElementById('hours').textContent = hours;
+      document.getElementById('minutes').textContent = minutes;
+      document.getElementById('seconds').textContent = seconds;
+    }
+    // Update countdown immediately and then every minute
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</section>
+<div class="divider "></div>
+<div class="flex  flex-col justify-center items-start ">
+
+  <!-- Proceedings -->
+  <div class="   mx-auto   md:flex-3 ">
+    <%- include('../components/section_title.ejs', {
+      text: 'Publication and Indexing ',
+      level: 'h2'
+    }) %>
+    <div class="flex justify-center md:flex-row flex-col gap-4 ">
+      <% for( let i=0; i < proceedings.length; ++i ) { %>
+      <div class="timeline-item aspect-square h-40 overflow-hidden border-base-300 bg-white  ">
+        <img src="<%= proceedings[i].src %>" alt="<%= proceedings[i].alt %>" class="mx-auto object-contain h-32 w-auto" />
+      </div>
+      <% } %>
+    </div>
+  </div>
+  <!-- Technical Partners -->
+  <div class="divider "></div>
+
+  <div class="   mx-auto  md:flex-5 ">
+    <%- include('../components/section_title.ejs', {
+      text: 'Technical Partners',
+      level: 'h2'
+    }) %>
+    <div class="flex justify-center items-center md:flex-row flex-col gap-4 ">
+      <% for( let i=0; i < technical_partners.length; ++i ) { %>
+      <div class="timeline-item aspect-square <%= technical_partners[i].alt == "IEEE" || technical_partners[i].alt == "SIRG"? "w-64 h-40" : "w-40 h-40" %>   overflow-hidden border-base-300 bg-white flex items-center justify-center p-2">
+        <img src="<%= technical_partners[i].src %>" alt="<%= technical_partners[i].alt %>" class="object-contain w-full h-full" />
+      </div>
+      <% } %>
+    </div>
+    <div class="mt-6 px-4 ">
+      <p class="text-small  text-center text-base-content/70 leading-relaxed">
+        The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="divider"></div>
+
+<!-- About Section -->
+<section id="about" class="bg-base-100 my-10">
+  <div class="container mx-auto px-4 md:max-w-2/3">
+    <div class="text-center mb-16">
+      <%- include('../components/section_title', { text: 'About ICCT-SD 2026', level: 'h2' }) %>
+      <p class="text-justify text-body">
+        <% for( let index = 0; index < about.length; index++ ) { %>
+        <%= about[index] %> <br>
+        <% } %>
+
+
+      </p>
+    </div>
+    <div class="gap-12 items-center my-16">
+
+      <h3 class="text-h3 font-semibold text-secondary mb-6 font-montserrat text-center">Objectives</h3>
+      <div class="grid gap-3">
+        <% for(let i=0; i < objectives.length; i++) { %>
+        <div class="p-3 bg-base-200  border-l-4 border-secondary/30">
+          <p class="text-body font-semibold text-base-content/90 leading-relaxed">
+            <%= objectives[i] %>
+          </p>
+        </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- Important Links Section -->
+<section class="py-10 bg-gradient-to-br from-base-200 to-base-100">
+  <div class="container mx-auto px-4 md:max-w-2/3">
+    <div class="text-center mb-6">
+      <%- include('../components/section_title', { text: 'The City, Ludhiana.', level: 'h2' }) %>
+    </div>
+    <!-- name of each tab group should be unique -->
+    <div class="tabs tabs-xs md:tabs-md tabs-border w-full">
+      <!-- Tab 1 -->
+      <input type="radio" name="ludhiana_tabs" class="tab  ml-4" aria-label="About Ludhiana" checked="checked" />
+      <div class="tab-content border-base-300 bg-base-100 p-10 space-y-4">
+        <h2 class="text-h5 font-bold text-secondary">About Ludhiana</h2>
+        <p class="leading-relaxed text-justify text-base-content/90 text-body">
+          Ludhiana, often called the <strong>Manchester of India</strong>, is the
+          largest city in Punjab and a major industrial hub of northern India. Known
+          for its vibrant textile industry, hosiery exports, and entrepreneurial
+          spirit, Ludhiana blends tradition with progress. Beyond its economic
+          prowess, the city is rich in Punjabi culture — from lively folk dances and
+          sumptuous cuisine to warm hospitality. The Sutlej River runs along its
+          northern edge, offering a serene contrast to the city’s bustling life.
+          Whether you’re walking through old bazaars, exploring Gurudwaras, or
+          enjoying a glass of lassi at a roadside dhaba, Ludhiana promises an
+          experience full of heart and energy.
+        </p>
+      </div>
+
+      <!-- Tab 2 -->
+      <input type="radio" name="ludhiana_tabs" class="tab" aria-label="Gallery" />
+      <div class="tab-content border-base-300 bg-base-100 p-10">
+        <h2 class="text-h5 font-bold text-secondary mb-6">Gallery</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <% for( let index=0; index < ludhiana_images.length; index++ ) { %>
+          <img src="<%= ludhiana_images[index].src %>" alt="<%= ludhiana_images[index].alt %>" class=" shadow-md object-cover object-top h-48 w-full" />
+          <% } %>
+
+        </div>
+      </div>
+
+      <input type="radio" name="ludhiana_tabs" class="tab" aria-label="Destinations" />
+      <div class="tab-content border-base-300 bg-base-100 p-10 space-y-4">
+        <h2 class="text-h5 font-bold text-secondary">Destinations Around Ludhiana</h2>
+        <ul class="list-disc list-inside text-base-content/90 space-y-2">
+          <% for( let index=0; index < ludhiana_places.length; index++ ) { %>
+          <li class="link link-secondary flex">
+
+            <a href="<%= ludhiana_places[index].mapLink %>">
+              <strong>
+                <%= ludhiana_places[index].name %>
+              </strong> – <%= ludhiana_places[index].description %>
+            </a>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+
+      <!-- Tab 4 -->
+      <input type="radio" name="ludhiana_tabs" class="tab" aria-label="Hotels Nearby" />
+      <div class="tab-content border-base-300 bg-base-100 p-10 space-y-4">
+        <h2 class="text-h5 font-bold text-secondary mb-6">Hotels Nearby</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <% for( let index=0; index < hotels_nearby.length; index++ ) { %>
+          <a href="<%= hotels_nearby[index].link %>" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center gap-3 p-6  bg-white border-2 border-secondary/30 hover:border-secondary hover:shadow-md transition-all duration-300 group">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-secondary group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+            <span class="text-body font-bold text-secondary text-center"><%= hotels_nearby[index].name %></span>
+            <span class="text-small text-base-content/70">View Details →</span>
+          </a>
+          <% } %>
+        </div>
+      </div>
+
+      <!-- Tab 5 -->
+      <input type="radio" name="ludhiana_tabs" class="tab" aria-label="How to Reach GNDEC, Ludhiana" />
+      <div class="tab-content border-base-300 bg-base-100 p-10 space-y-6">
+        <h2 class="text-h5 font-bold text-secondary mb-6">How to Reach Guru Nanak Dev Engineering College, Ludhiana</h2>
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-6">
+          <% for( let index=0; index < how_to_reach.length; index++ ) { %>
+          <div class=" bg-gradient-to-br from-secondary/10 to-secondary/5 ">
+            <div class=" p-6 flex flex-col items-stretch text-center ">
+              <p class="text-body text-base-content/80 mt-2">
+                <span class="text-secondary font-semibold"> <%= how_to_reach[index].mode %> : </span> <%= how_to_reach[index].location %>
+              </p>
+              <div class="h-72">
+                <%- how_to_reach[index].map_element %>
+              </div>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,31 @@
+<% about = [
+  {
+    title : "Advancements and Futuristic Trends in Mechanical and Materials Engineering(AFTMME)",
+    about : ["The inaugural AFTMME conference was started in 2010 with the goal of bringing together mechanical and materials engineers under a common umbrella to bring academicians, researchers, practising engineers, industrialists and start-up professionals together for sharing their ideas & experiences and disseminate knowledge. Mechanical and Materials Engineering have long had a symbiotic relationship in this space. The conference aims to share knowledge and findings of researchers, academicians and people from industries their about materials and manufacturing for sustainable growth. In the first segment of this conference, the participants are welcome to present their ideas and current findings on materials and manufacturing for greener future. Moreover, the conference will also witness prominent people of their respected fields as keynote speakers."]
+  },
+    {
+      title : "Guru Nanak Dev Engineering College (GNDEC), Ludhiana",
+      about : ['Guru Nanak Dev Engineering College, one of the prestigious, oldest and minority institution of Northern India, was established under the aegis of Nankana Sahib Education Trust (NSET) in 1956. NSET was founded in memory of the most sacred temple of Nankana Sahib, birth place of Guru Nanak Dev Ji. Shiromani Gurudwara Prabandhak Committee, Amritsar, a premier organization of universal brotherhood, which is the main force behind the mission of "Removal of Economic Backwardness through Technology" and NSET with the same mission, established a Polytechnic in 1953 and Guru Nanak Dev Engineering College (GNDEC) in 1956. The Trust deed was registered on 24th February 1953 with a commitment by Nankana Sahib Education Trust to uplift the vast weaker section of Indian polity comprising Rural India by admitting 70% students every year from Rural Areas. This commitment was made to the nation on 8th April, 1956 and foundation stone of the College was laid by Late Dr. Rajendra Prasad Ji, the First President of India.',
+        "This is the first Engineering College of Punjab, which was conferred Autonomous Status by University Grants Commission (UGC), New Delhi in 2012 under section 2(f) and 12(B) of UGC Act 1956. Most of the undergraduate courses are accredited by National Board of Accreditation about 3 times since 2004. The college is accredited with ‘A” Grade by NAAC, UGC."
+      ]
+    },
+    {
+      title : "Society of Materials and Mechanical Engineers (SOMME)",  
+      about : ["Society of Materials and Mechanical Engineers (SOMME) has been founded and formed under the dynamic and prominent academicians Dr. Satya Prakash, Emeritus Professor, IIT Roorkee (India) as Patron of society and Prof. Buta Singh Sidhu, Ex. Vice Chancellor, MRSPTU, Bathinda (India) as President of society. The objective of the society is to promote research and development activities in the field of materials and mechanical engineering for the growth of society in this technical era. For more details, the society website <a class='link link-secondary' href='http://www.somme.in/' target='_blank'>http://www.somme.in/</a> can be visited."]
+    },
+  ] %>
+
+<section class="bg-base-100 py-16 flex flex-col gap-12 ">
+  <% for( let index = 0; index < about.length; index++ ) { %>
+  <div class=" mx-auto px-4 md:max-w-2/3 bg-secondary/10 p-4">
+    <div class="text-center mb-4">
+      <%- include('../components/section_title', { text: about[index].title, level: "h4" }) %>
+    </div>
+    <% for (let i = 0; i < about[index].about.length; i++) { %>
+    <p class="text-justify bg-base-100 p-4 text-base-content/90 text-body">
+      <%- about[index].about[i] %>
+    </p>
+    <% } %>
+  </div>
+  <% } %>
+</section>

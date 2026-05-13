@@ -1,0 +1,85 @@
+<% tracks = [
+  {
+    track: "Advanced Materials and Applications",
+    topics: [
+      "Automotive and Aerospace Applications",
+      "Tribological Applications",
+      "Structural and Semi-Structural Applications",
+      "Bio-Inspired Materials",
+      "Energy Storage Materials",
+      "Ballistic Impact Resistance Materials",
+      "Shielding Materials",
+      "Polymer and Carbon Composites"
+    ]
+  },
+  {
+    track: "Emerging Technologies and Manufacturing",
+    topics: [
+      "Additive Manufacturing (3D Printing)",
+      "Non-Conventional manufacturing Processes",
+      "Lean manufacturing",
+      "Micro & Nano-Manufacturing",
+      "Surface Engineering",
+      "Sustainable Design and Manufacturing",
+      "Six Sigma Approach in Manufacturing",
+      "Modern Manufacturing Systems"
+    ]
+  },
+  {
+    track: "Simulation, Modeling, and Optimization",
+    topics: [
+      "Simulation and Optimization for Industrial Applications",
+      "Finite Element Modeling and Simulations",
+      "Modeling and Numerical Methods for Material Performance",
+      "CAD, CAM, CIM, and Flexible Manufacturing Systems (FMS)",
+      "Optimization of Manufacturing Parameters"
+    ]
+  },
+  {
+    track: "Quality Control and Performance Assessment",
+    topics: [
+      "Metrology and Quality Control in Manufacturing",
+      "Long-Term and Short-Term Performance of Materials and Components",
+      "Case Studies on New Materials Replacing Conventional Ones",
+      "Machining of Hard Materials"
+    ]
+  },
+  {
+    track: "AI & Machine Learning in Materials Science",
+    topics: [
+      "Al-Driven Materials Discovery and Design",
+      "Machine Learning for Predicting Material Properties",
+      "Alin Manufacturing Process Optimization",
+      "Deep Learning for Materials Failure Prediction and Analysis",
+      "Data-Driven Approaches in Materials Engineering",
+      "Al-Assisted Design and Testing of Advanced Materials for Sensors and Construction",
+      "Sensors for Industrial Applications",
+      "Construction and Building Materials",
+      "Advanced Surveying Materials",
+      "Bulk Construction Materials"
+    ]
+  },
+]; %>
+
+<section class="bg-base-100 md:w-2/3 mx-auto py-16  gap-12">
+  <div class="text-center mb-12">
+    <%- include('../components/section_title', { text: 'Conference Tracks', level: "h2" }) %>
+  </div>
+  <div class="grid md:grid-cols-2  gap-8">
+    <% for (let index = 0; index < tracks.length; index++) { %>
+    <div class="px-4  bg-secondary/10 p-4">
+      <div class="text-center mb-4">
+        <h3 class="text-h6 text-secondary font-montserrat font-bold leading-tight">
+          <%= tracks[index].track %>
+        </h3>
+      </div>
+
+      <% for (let i = 0; i < tracks[index].topics.length; i++) { %>
+      <p class="text-justify bg-base-100 p-4 text-base-content/90 text-body border border-base-200">
+        <%= tracks[index].topics[i] %>
+      </p>
+      <% } %>
+    </div>
+    <% } %>
+  </div>
+</section>

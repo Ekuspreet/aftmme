@@ -1,0 +1,173 @@
+<% registration_intro="To participate in the ICCT-SD-2026, at least one of the authors of each accepted paper must register and pay the applicable fee as specified below. The registration fee includes a conference kit (for offline participants only), access to all technical sessions, workshops, plenary talks, as well as refreshment / meals. Certificates will be issued to all registered participants." ; 
+publication_note="Only papers that are both accepted and presented will be published in the conference proceedings. Each paper is limited to 8-10 pages." ; 
+student_note="Students and research scholars are required to submit a scanned copy of their institutional ID card along with the registration form. The original ID card must be presented at the time of paper presentation." ; 
+fees = [
+  {
+    "Paper Published as Book Chapter in CRC Press (Edited Book-Scopus Indexed)": [
+      { "Research Scholar": "₹ 5500/-" },
+      { "Faculty": "₹ 7500/-" },
+      { "Research Scholar/Student (GNDEC)": "₹ 4500/-" },
+      { "Faculty (GNDEC)": "₹ 5500/-" },
+      { "International Research Scholar": "$ 150 (USD)" },
+      { "International Delegate": "$ 250 (USD)" },
+      { "Industry": "₹ 10000/-" }
+    ]
+  },
+  {
+    "Paper Published in ICCT-SD 2026 Proceedings (ISBN Number Only)": [
+      { "Research Scholar": "₹ 4500/-" },
+      { "Faculty": "₹ 5500/-" },
+      { "International Research Scholar": "$ 100 (USD)" },
+      { "International Delegate": "$ 200 (USD)" },
+      { "Research Scholar/Student (GNDEC) (if GNDEC student is 1st Author)": "₹ 3000/-" },
+      { "Faculty (GNDEC)": "₹ 4500/-" },
+      { "Industry": "₹ 7500/-" }
+    ]
+  },
+  {
+    "Poster Presentation": [
+      { "Poster Presentation": "₹ 2500/-" }
+    ]
+  },
+  {
+    "Attendees Only": [
+      { "Indian Delegates": "₹ 2500/-" },
+      { "Foreign Delegates": "$ 50 (USD)" }
+    ]
+  }
+];
+
+non_refundable_note = "Registration fee is non-refundable.";
+%>
+
+<!-- Hero Section -->
+<section class="pt-10 mx-auto px-4 md:max-w-2/3">
+  <div class="text-center">
+    <%- include('../components/section_title', { text: 'Registration', level: 'h2' }) %>
+    <p class="text-justify text-body">
+      Register now to secure your spot at ICCT-SD-2026. Join leading researchers, academics, and industry professionals in advancing sustainable development through technology. <span class="text-error font-bold">Note : Registrations are Closed.</span>
+    </p>
+  </div>
+</section>
+
+<div class="divider my-20"></div>
+
+<!-- Main Content -->
+<section class="bg-base-100">
+  <div class="container mx-auto px-4 md:max-w-2/3">
+
+    <!-- Section 1: Important Note -->
+    <article class="card  border border-secondary/20 shadow-md hover:shadow-md transition-shadow duration-300 mb-20">
+      <div class="card-body p-8">
+        <div class="flex flex-col gap-2 items-center mb-4">
+          <div class="text-center ">
+            <%- include('../components/section_title', { text: 'Important Information', level: 'h2' }) %>
+          </div>
+        </div>
+        <p class="text-body text-base-content/80 mb-4 leading-relaxed"> <%= registration_intro %> </p>
+
+        <div class="p-4 bg-white/80  border-l-4 border-secondary/40 mb-3">
+          <p class="text-body text-base-content/80"><strong class="text-secondary">Publication:</strong> <%= publication_note %></p>
+        </div>
+
+        <div class="p-4 bg-white/80  border-l-4 border-secondary/40">
+          <p class="text-body text-base-content/80"><strong class="text-secondary">Students:</strong> <%= student_note %></p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Section 2: Registration Fees -->
+    <article class="card  border border-secondary/20 shadow-md mb-20">
+      <div class="card-body md:px-8 md:py-8 px-2 py-8 ">
+        <div class="flex flex-col gap-2 items-center mb-4">
+
+          <div class="text-center ">
+            <%- include('../components/section_title', { text: 'Registration Fees', level: 'h2' }) %>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4">
+          <% fees.forEach(function(f){ %>
+          <div class="py-3 bg-white  border-l-4 border-r-4 border-secondary/40 shadow-sm">
+            <h4 class="text-body text-center font-bold text-base-content/90"><%= Object.keys(f)[0] %></h4>
+            <div class="mt-3 border-t border-base-300">
+              <table class="table table-compact table-xs  md:table-sm w-full mt-4">
+                <tbody>
+                  <% Object.values(f)[0].forEach(function(item){ %>
+                  <tr>
+                    <td class="text-body w-auto"><%= Object.keys(item)[0] %></td>
+                    <td class="text-body text-right font-mono "><%= Object.values(item)[0] %></td>
+                  </tr>
+                  <% }) %>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+        <p class="text-body w-auto font-semibold mt-2">*<%= non_refundable_note %></p>
+
+
+      </div>
+    </article>
+
+    <!-- Section 3: Registration Links -->
+    <article class="card bg-gradient-to-br from-secondary/10 to-primary/10 border border-secondary/30 shadow-md mb-20">
+      <div class="card-body ">
+        <div class="flex items-center justify-center mb-4">
+
+          <h3 class="text-h3 font-bold text-error  font-montserrat">Registrations are Closed</h3>
+        </div>
+
+        <!-- <p class="text-body text-base-content/80 text-center mb-8 leading-relaxed">
+          Complete your registration in two simple steps: Make the payment and fill out the registration form.
+        </p>
+
+        <div class="flex flex-col  gap-1 p-3  bg-white border-2 border-secondary/30">
+          <div class="text-h6 font-semibold text-secondary text-center">Payment Details</div>
+          <div class="text-h6 text-center ">
+            <span class="text-secondary">Account Information</span>
+            <div class="flex flex-col items-center">
+              <span>
+                Account Number : 99990000224422
+              </span>
+              <span>
+                Account Name : CSE-GNDEC
+              </span>
+              <span>
+                Bank : HDFC Bank Ltd, Miller Ganj, Manju Cinema, Ludhiana
+              </span>
+              <span>
+                IFSC Code : HDFC0000259
+              </span>
+            </div>
+          </div>
+          <div class="divider">OR</div>
+
+          <div class="text-body text-center">
+            <span class="text-secondary ">QR Code</span>
+            <img src="/images/qr_code.jpeg" alt="QR Code" class="mx-auto w-full h-auto max-w-xs sm:max-w-sm md:max-w-md  object-contain">
+          </div>
+        </div>
+
+        <div class="flex flex-col  gap-3 p-6  bg-white border-2 border-secondary/30">
+          <div class="text-h6 font-semibold text-secondary text-center">Registration Form</div>
+          <div class="text-body text-center">
+            Please fill the registration form after making the payment. <a href="https://forms.gle/a9jYGkTUYfWzCLMDA" onclick="window.open(this.href, '_blank', 'width=900,height=700'); return false;" rel="noopener noreferrer" class="link link-secondary">Click Here</a> to access the form.
+          </div>
+        </div>
+
+        <div class="mt-8 p-4 bg-white/80  border-l-4 border-secondary/40">
+          <p class="text-body font-semibold text-secondary mb-3">
+            <span class="text-error">Important Points:</span>
+          </p>
+          <ul class="list-disc list-inside text-small text-base-content/70 space-y-2">
+            <li>After submitting the registration fee, it is mandatory to complete the registration form. Your registration will be confirmed only after the form is received. Please keep your payment receipt for reference.</li>
+            <li>On-campus accommodation will be provided on a first-come-first-serve (FCFS) basis at a nominal rate. If anybody is interested, kindly <a class="link link-secondary" href="/contact.html">contact us</a>.</li>
+          </ul>
+        </div> -->
+      </div>
+    </article>
+
+  </div>
+</section>

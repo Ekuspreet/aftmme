@@ -1,0 +1,34 @@
+{
+  "name": "icct-sd-26-web",
+  "version": "1.0.0",
+  "description": "A Website for International Conference on Intelligent Computational and Communication Technologies for Sustainable Developement (ICCT-SD 26)",
+  "homepage": "https://github.com/Ekuspreet/icct-sd-26-web#readme",
+  "bugs": {
+    "url": "https://github.com/Ekuspreet/icct-sd-26-web/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ekuspreet/icct-sd-26-web.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "tailwind": "npx @tailwindcss/cli -i ./public/css/input.css -o ./public/css/output.css --watch",
+    "build": " npx @tailwindcss/cli -i ./public/css/input.css -o ./public/css/output.css && node scripts/build.js"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.14",
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "tailwindcss": "^4.1.14"
+  },
+  "devDependencies": {
+    "daisyui": "^5.5.17",
+    "nodemon": "^3.1.10"
+  }
+}

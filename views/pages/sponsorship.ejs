@@ -1,0 +1,265 @@
+<%
+// Partnership Tiers
+partnership_tiers = [
+  {
+    tier: "Platinum Partnership",
+    price: "₹1,00,000",
+    intl_price: "$2,000",
+    color: "from-purple-500/20 to-purple-300/20",
+    borderColor: "border-purple-500/40",
+    icon: "💎",
+    tagline: "Powered-by Partner",
+    featured: true,
+    benefits: [
+      "Prominent branding opportunities across all event touchpoints — including logo placement on banners, posters, and certificates.",
+      "10-15 minutes of stage time to present your brand to the audience.",
+      "Logo and name featured on all official print materials.",
+      "Dedicated 10-minute interaction session with event delegates.",
+      "Spacious cubical stall area of 30x15 feet for your brand's showcase.",
+      "Opportunity to exhibit your products or services to a vibrant and diverse crowd.",
+      "Certificate of Recognition as a Powered-by Partner.",
+      "Brand props showcased under the event's main limelight.",
+      "Additional personal standees displayed at the main venue.",
+      "Company delegates will be treated as Special Guests during the event.",
+      "Premium digital promotion through official social media channels.",
+      "Prominent logo's on Brochure (Size: Large)"
+    ]
+  },
+  {
+    tier: "Gold Partnership",
+    price: "₹75,000",
+    intl_price: "$1,400",
+    color: "from-yellow-500/20 to-yellow-300/20",
+    borderColor: "border-yellow-500/40",
+    icon: "🥇",
+    tagline: "Co-Powered by Partner",
+    featured: false,
+    benefits: [
+      "Dedicated cubical stall space of 15x15 feet to highlight your brand.",
+      "5-6 minutes of stage time to share your brand story.",
+      "Name and logo placement on some of official print and promotional materials.",
+      "Engage directly with an active and diverse audience to present your offerings.",
+      "Certificate of Recognition as a Co-Powered by Partner.",
+      "Featured mentions on the festival's social media platforms.",
+      "Additional personal standees allowed within the main venue.",
+      "Prominent logo's on Brochure (Medium and Discrete)"
+    ]
+  },
+  {
+    tier: "Silver Partnership",
+    price: "₹50,000",
+    intl_price: "$700",
+    color: "from-gray-400/20 to-gray-300/20",
+    borderColor: "border-gray-400/40",
+    icon: "🥈",
+    tagline: "Supporting Partner",
+    featured: false,
+    benefits: [
+      "A 15x15 feet cubical stall space for your brand's display.",
+      "Certificate of Recognition as a Supporting Partner.",
+      "Medium-sized logo featured on event banners."
+    ]
+  },
+  {
+    tier: "Bronze Partnership",
+    price: "₹25,000",
+    intl_price: "$300",
+    color: "from-orange-600/20 to-orange-400/20",
+    borderColor: "border-orange-600/40",
+    icon: "🥉",
+    tagline: "Event Partner",
+    featured: false,
+    benefits: [
+      "Dedicated cubical stall area of 15x15 feet to promote your brand.",
+      "Certificate of Recognition as an Event Partner."
+    ]
+  }
+];
+
+// Why Sponsor Section
+why_sponsor = [
+  {
+    title: "Brand Visibility",
+    icon: "👁️",
+    description: "Gain extensive brand exposure to a diverse audience of researchers, academics, and industry professionals."
+  },
+  {
+    title: "Networking Opportunities",
+    icon: "🤝",
+    description: "Connect with leading minds in technology and sustainable development from across the globe."
+  },
+  {
+    title: "Market Reach",
+    icon: "🌍",
+    description: "Showcase your products and services to a targeted audience interested in cutting-edge technologies."
+  },
+  {
+    title: "Corporate Social Responsibility",
+    icon: "🌱",
+    description: "Demonstrate your commitment to sustainable development and technological innovation."
+  }
+];
+
+// Sponsorship Benefits Highlights
+benefits_highlights = [
+  { value: "500+", label: "Expected Participants", icon: "👥" },
+  { value: "3 Days", label: "Conference Duration", icon: "📅" },
+  { value: "International", label: "Reach and Recognition", icon: "🏆" }
+];
+
+// Contact Information
+contact_info = [
+  {
+    purpose: "For Sponsorship Information",
+    name: "Dr. Jasbir Singh Saini",
+    department: "Department of Computer Science and Engineering",
+    institution: "Guru Nanak Dev Engineering College, Ludhiana",
+    contact: "+91-9876700810"
+  },
+  {
+    purpose: "For Exhibition Related matters",
+    name: "Prof. Jaswant Singh",
+    department: "Department of Computer Science and Engineering",
+    institution: "Guru Nanak Dev Engineering College, Ludhiana",
+    contact: "+91-9646863063"
+  }
+];
+%>
+
+
+<!-- Hero Section -->
+<section class="pt-10 mx-auto px-4 md:max-w-2/3">
+  <div class="text-center ">
+    <%- include('../components/section_title', { text: 'Sponsorship Opportunities', level: 'h2' }) %>
+    <p class="text-justify text-body">
+      Join us as a sponsor and gain unparalleled visibility at one of the premier conferences on Intelligent Computational and Communication Technologies for Sustainable Development. Connect with leading researchers, industry experts, and innovators.
+    </p>
+  </div>
+</section>
+
+<!-- Benefits Highlights -->
+<section class="my-20 bg-base-100">
+  <div class="container mx-auto px-4 md:max-w-2/4">
+    <div class="flex flex-wrap justify-center gap-6">
+      <% for(let i = 0; i < benefits_highlights.length; i++) { %>
+      <div class="card bg-gradient-to-br from-secondary/10 to-secondary/5 border border-secondary/20 text-center shadow-md hover:shadow-md transition-shadow duration-300">
+        <div class="card-body p-6">
+          <div class="text-4xl "><%= benefits_highlights[i].icon %></div>
+          <h3 class="font-bold text-secondary text-h3 mb-2"><%= benefits_highlights[i].value %></h3>
+          <p class="text-body font-semibold text-base-content/80"><%= benefits_highlights[i].label %></p>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+
+<!-- Partnership Tiers Section -->
+<section class="py-20 bg-base-100">
+  <div class="container mx-auto px-4 md:max-w-2/3">
+    <div class="text-center ">
+      <%- include('../components/section_title', { text: 'Partnership Tiers', level: 'h2' }) %>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8">
+      <% for(let i = 0; i < partnership_tiers.length; i++) { %>
+      <div class="card bg-gradient-to-br <%= partnership_tiers[i].color %> border <%= partnership_tiers[i].borderColor %> shadow-md hover:shadow-2xl transition-all duration-300 <%= partnership_tiers[i].featured ? 'ring-2 ring-secondary/50' : '' %>">
+        <div class="card-body p-8">
+          <!-- Tier Header -->
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center">
+              <div class="w-16 h-16 bg-white  flex items-center justify-center mr-4 shadow-md">
+                <span class="text-4xl"><%= partnership_tiers[i].icon %></span>
+              </div>
+              <div>
+                <h3 class="text-h4 font-bold text-secondary font-montserrat">
+                  <%= partnership_tiers[i].tier %>
+                </h3>
+                <div class="badge badge-secondary badge-sm mt-1">
+                  <%= partnership_tiers[i].tagline %>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Price -->
+          <div class="mb-6 flex flex-col md:flex-row items-center justify-center gap-2 text-center">
+            <div class="text-h2 font-bold text-secondary font-montserrat flex-1">
+              <%= partnership_tiers[i].price %>
+              <p class="text-small text-base-content/70 mb-2">Indian Sponsorship</p>
+            </div>
+            <div class="text-h2 font-bold text-secondary font-montserrat flex-1">
+              <%= partnership_tiers[i].intl_price %>
+              <p class="text-small text-base-content/70">International Sponsorship (USD)</p>
+            </div>
+          </div>
+
+          <!-- Benefits List -->
+          <div class="space-y-3">
+            <h4 class="font-semibold text-secondary text-sm uppercase tracking-wide mb-4">Benefits Included:</h4>
+            <div class="grid gap-3 max-h-96 overflow-y-auto pr-2">
+              <% for(let j = 0; j < partnership_tiers[i].benefits.length; j++) { %>
+              <div class="p-3 bg-white/80  border-l-4 <%= partnership_tiers[i].borderColor %>">
+                <div class="flex items-start">
+                  <span class="w-5 h-5 bg-secondary/20  flex items-center justify-center mr-3 flex-shrink-0 mt-0.5">
+                    <svg class="w-3 h-3 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                  <p class="text-body text-left text-base-content/90 leading-relaxed">
+                    <%= partnership_tiers[i].benefits[j] %>
+                  </p>
+                </div>
+              </div>
+              <% } %>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Contact Section -->
+<section class="py-20 bg-gradient-to-br from-base-200 to-base-100">
+  <div class="container mx-auto px-4md:max-w-2/3">
+    <div class="card bg-gradient-to-br from-secondary/10 to-primary/10 border border-secondary/30 shadow-md">
+      <div class="card-body p-8 text-center">
+        <div class="w-20 h-20 bg-secondary/20  flex items-center justify-center mx-auto mb-6">
+          <span class="text-5xl">📧</span>
+        </div>
+        <h2 class="text-h2 font-bold text-secondary mb-4 font-montserrat">
+          Interested in Sponsoring?
+        </h2>
+        <p class="text-body text-base-content/80 mb-8md:max-w-2/3 mx-auto leading-relaxed">
+          We'd love to discuss partnership opportunities with you. Get in touch with our sponsorship team to customize a package that aligns with your organization's objectives.
+        </p>
+
+        <div class="mt-8 grid md:grid-cols-2 gap-6 text-leftmd:max-w-2/3 mx-auto">
+          <% for(let i = 0; i < contact_info.length; i++) { %>
+          <div class="p-6 bg-white  border-l-4 border-secondary/30 shadow-md">
+            <h3 class="text-h6 font-bold text-secondary mb-4"><%= contact_info[i].purpose %></h3>
+            <div class="space-y-2">
+              <p class="text-sm font-semibold text-base-content/90"><%= contact_info[i].name %></p>
+              <p class="text-body text-base-content/70"><%= contact_info[i].department %>, <br> <%= contact_info[i].institution %></p>
+              <div class="mt-3 pt-3 border-t border-base-300">
+                <p class="text-body font-semibold text-secondary">Contact No.</p>
+                <p class="text-body font-semibold text-base-content/90"><%= contact_info[i].contact %></p>
+              </div>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

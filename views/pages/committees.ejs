@@ -1,0 +1,87 @@
+<% 
+committees = [
+  {
+    title: "Patron",
+    members: [
+      "Dr. Satya Prakash, Ex Emeritus Professor, I.I.T. Roorkee",
+      "Dr. Sehijpal Singh, Principal, GNDEC Ludhiana",
+      "Dr. Buta Singh Sidhu, Pro Vice Chancellor, DBU Mandi Gobindgarh"
+    ]
+  },
+  {
+    title: "Co-Patron",
+    members: [
+      "Dr. Harpreet Singh, I.I.T. Ropar",
+      "Dr. Harmeet Singh, GNDEC Ludhiana",
+      "Dr. Harpreet Kaur Grewal, GNDEC, Ludhiana"
+    ]
+  },
+  {
+    title: "Conference Chair/Co-Chair",
+    members: [
+      "Dr. Jamaninder Singh Grewal, GNDEC Ludhiana",
+      "Dr. Hazoor Singh, YDoE, Punjabi University, Talwandi Sabo",
+      "Dr. Vikas Chawla, IKGPTU Campus, Hoshiarpur"
+    ]
+  },
+  {
+    title: "Conveners",
+    members: [
+      "Dr. Ravikant I.I.T. Ropar",
+      "Dr. Sukhpal Singh Chatha, YDoE, Punjabi University, Talwandi Sabo",
+      "Dr. Chamkaur Jindal, GNDEC Ludhiana",
+      "Dr. Raman Kumar Sehgal, GNDEC Ludhiana"
+    ]
+  },
+  {
+    title: "Organizing Secretary",
+    members: [
+      "Dr. Rakesh Bhatia, YDoE, Punjabi University, Talwandi Sabo",
+      "Er. Lakhveer Singh Khana, GNDEC Ludhiana"
+    ]
+  },
+  {
+    title: "Co-Organizing Secretary",
+    members: [
+      "Dr. Pardeep Kumar, YDoE, Punjabi University, Talwandi Sabo",
+      "Dr. Rajvir Kaur Sraw, GNDEC Ludhaina"
+    ]
+  },
+  {
+    title: "Advertising and Publication Committee",
+    members: [
+      "Dr. Rakesh Bhatia, YDoE, Punjabi University, Talwandi Sabo",
+      "Dr. Amrinder Singh Pannu, GNDEC Ludhiana",
+      "Dr. Jaspreet Singh, GNDEC Ludhiana"
+    ]
+  },
+  {
+    title: "Finance Committee",
+    members: [
+      "Dr. Harish Kumar Garg, MRS PTU Bathinda",
+      "Dr. Prem Singh, GNDEC Ludhiana"
+    ]
+  }
+];
+%>
+
+<section class="bg-base-100 md:w-2/3 mx-auto py-16">
+  <div class="text-center mb-12">
+    <%- include('../components/section_title', { text: 'Organizing Committee', level: "h2" }) %>
+  </div>
+  <div class="flex flex-col gap-8 px-4">
+    <% for (let index = 0; index < committees.length; index++) { %>
+    <div>
+      <h3 class="text-h6 text-secondary font-montserrat font-bold leading-tight mb-4">
+        <%= committees[index].title %>
+      </h3>
+
+      <% for (let i = 0; i < committees[index].members.length; i++) { %>
+      <p class="text-base-content/90 text-body mb-2">
+        <%= committees[index].members[i] %>
+      </p>
+      <% } %>
+    </div>
+    <% } %>
+  </div>
+</section>
