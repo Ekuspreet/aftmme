@@ -67,23 +67,20 @@ committees = [
 
 <section class="bg-base-100 py-12 md:py-16">
   <div class="container mx-auto px-4 md:max-w-5xl">
-  <div class="text-center mb-10">
-    <%- include('../components/section_title', { text: 'Organizing Committee', level: "h2" }) %>
-  </div>
-  <div class="grid md:grid-cols-2 gap-6">
-    <% for (let index = 0; index < committees.length; index++) { %>
-    <article class="bg-secondary/10 p-4 border border-secondary/20">
-      <h3 class="text-h6 text-secondary font-montserrat font-bold leading-tight mb-4">
-        <%= committees[index].title %>
-      </h3>
+    <div class="grid md:grid-cols-2 gap-6">
+      <% for (let index = 0; index < committees.length; index++) { %>
+      <article class="bg-secondary/10 p-4 border border-secondary/20">
+        <h3 class="text-h6 text-secondary font-montserrat font-bold leading-tight mb-4">
+          <%= committees[index].title %>
+        </h3>
 
-      <% for (let i = 0; i < committees[index].members.length; i++) { %>
-      <p class="text-base-content/90 text-body mb-2">
-        <%= committees[index].members[i] %>
-      </p>
+        <% for (let i = 0; i < committees[index].members.length; i++) { %>
+        <p class="text-base-content/90 text-body mb-2">
+          <%= committees[index].members[i] %>
+        </p>
+        <% } %>
+      </article>
       <% } %>
-    </article>
-    <% } %>
-  </div>
+    </div>
   </div>
 </section>

@@ -10,23 +10,22 @@ contacts = [
 
 <section class="bg-base-100 py-12 md:py-16">
   <div class="container mx-auto px-4 md:max-w-5xl">
-  <div class="text-center">
-    <%- include('../components/section_title', { text: 'Contact', level: 'h2' }) %>
-    <p class="text-center text-body">
-      For further information regarding abstract submission, full paper submission, and registration, kindly contact:
-    </p>
-  </div>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-    <% contacts.forEach(function(person){ %>
-    <div class="bg-secondary/10 p-4 border border-secondary/30">
-      <h2 class="text-h6 font-semibold text-secondary font-montserrat mb-4"><%= person.role %></h2>
-      <div class="bg-base-100 p-4">
-        <p class="text-body font-semibold text-base-content/90"><strong>Name:</strong> <%= person.name %></p>
-        <p class="text-body text-base-content/80"><strong>Phone:</strong> <a href="tel:<%= person.phone %>" class="link link-secondary"><%= person.phone %></a></p>
-      </div>
+    <div class="text-center">
+      <%- include('../components/section_title', { text: 'Contact', level: 'h2' }) %>
+      <p class="text-center text-body">
+        For further information regarding abstract submission, full paper submission, and registration, kindly contact:
+      </p>
     </div>
-    <% }) %>
-  </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+      <% contacts.forEach(function(person){ %>
+      <div class="bg-secondary/10 p-4 border border-secondary/30">
+        <div class="bg-base-100 p-4">
+          <p class="text-body font-bold text-base-content/90"><%= person.name %></p>
+          <p class="text-body text-base-content/80"><strong>Phone:</strong> <a href="tel:<%= person.phone %>" class="link link-secondary"><%= person.phone %></a></p>
+        </div>
+      </div>
+      <% }) %>
+    </div>
   </div>
 </section>
