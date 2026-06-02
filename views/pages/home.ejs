@@ -121,6 +121,7 @@ link: "https://www.hyatt.com/hyatt-regency/en-US/luhrl-hyatt-regency-ludhiana?sr
             <% }) %>
           </div>
 
+
           <div class="flex flex-wrap gap-3 mt-8">
             <% quick_links.forEach(function(link){ %>
             <a href="<%= link.href %>" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><%= link.label %></a>
@@ -144,7 +145,51 @@ link: "https://www.hyatt.com/hyatt-regency/en-US/luhrl-hyatt-regency-ludhiana?sr
   </div>
 
 
-  <div class="md:max-w-2/3 mx-auto my-10">
+  <section class="bg-base-100 py-12 md:py-16">
+    <div class="container mx-auto px-4 md:max-w-5xl">
+      <div class="text-center mb-10">
+        <%- include('../components/section_title', { text: 'Publication and Indexing Opportunities', level: 'h2' }) %>
+        <article class="bg-secondary/10 p-4 border border-secondary/20 mt-6">
+          <div class="bg-base-100 p-5 border-l-4 border-secondary">
+            <p class="text-body text-base-content/90 leading-relaxed text-justify">
+              Selected peer-reviewed papers from AFTMME 2026 will be
+              considered for proposed proceedings, edited volume, or journal special
+              issues, subject to approval by the concerned publisher or journal. The
+              organizing committee is preparing a proposal for Springer Lecture
+              Notes in Mechanical Engineering and exploring special issue
+              collaborations with reputed journals in mechanical engineering,
+              materials engineering, smart manufacturing, and sustainable
+              engineering systems.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-base-100 py-8 md:py-10">
+    <div class="container mx-auto px-4 md:max-w-5xl">
+      <div class="text-center mb-6">
+        <%- include('../components/section_title', { text: 'Proposed Springer Proceedings', level: 'h2' }) %>
+        <article class="bg-secondary/10 p-4 border border-secondary/20 mt-6">
+          <div class="bg-base-100 p-5 border-l-4 border-secondary">
+            <p class="text-body text-base-content/90 leading-relaxed text-justify">
+              The organizing committee intends to submit a proposal for selected
+              peer-reviewed papers from AFTMME 2026 to be considered for
+              publication in Springer’s Lecture Notes in Mechanical Engineering
+              book series. Final acceptance of the proceedings proposal and
+              individual papers will remain subject to Springer’s editorial
+              evaluation, peer-review standards, formatting requirements, and
+              publication policies.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="container mx-auto px-4 md:max-w-5xl my-10">
     <div class="text-center">
       <%- include('../components/section_title', { text: 'Important Dates', level: 'h2' }) %>
     </div>
@@ -153,7 +198,7 @@ link: "https://www.hyatt.com/hyatt-regency/en-US/luhrl-hyatt-regency-ludhiana?sr
       <a href="<%= dates[i].calendar_link %>" target="_blank" rel="noopener noreferrer" class="timeline-item p-4 bg-secondary/10 border border-secondary/20 hover:bg-secondary/20 transition-colors">
         <div class="text-center flex flex-col items-center">
           <div class="text-h5 font-black text-secondary"><%= dates[i].event %></div>
-          <time class=" font-montserrat text-h6 font-medium"><%= dates[i].date %></time>
+          <time class="font-montserrat text-h6 font-medium"><%= dates[i].date %></time>
         </div>
       </a>
       <% } %>

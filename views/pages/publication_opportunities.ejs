@@ -1,11 +1,29 @@
 <section class="bg-base-100 py-12 md:py-16">
-  <div class="container mx-auto px-4 md:max-w-4xl">
+  <div class="container mx-auto px-4 md:max-w-5xl">
     <div class="text-center mb-10">
       <%- include('../components/section_title', { text: 'Publication Opportunities', level: "h2" }) %>
     </div>
 
-    <div class="prose max-w-none">
-      <p>Details about publication venues, special issues, and indexing information will be posted here. Authors can find where accepted papers may be published and any partnering journals or proceedings information.</p>
+    <article class="bg-secondary/10 p-4 border border-secondary/20 mb-6">
+      <div class="bg-base-100 p-5 border-l-4 border-secondary">
+        <p class="text-body text-base-content/90 leading-relaxed text-justify">Selected high-quality papers presented at AFTMME 2026 will be considered for publication in peer-reviewed proceedings, edited volumes, or journal special issues, subject to editorial approval, peer review, plagiarism screening, publisher policies, and journal/series scope requirements.</p>
+      </div>
+    </article>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <article class="bg-secondary/10 p-4 border border-secondary/20">
+        <div class="bg-base-100 p-5 h-full">
+          <h3 class="text-h6 text-secondary font-montserrat font-bold leading-tight mb-4">Journal Special Issue Proposals Under Preparation</h3>
+          <p class="text-body text-base-content/90 leading-relaxed text-justify">The organizing committee is exploring journal special issue opportunities based on selected extended versions of high-quality conference papers. Authors of shortlisted papers may be invited to submit substantially extended manuscripts to relevant journals, subject to journal scope, independent peer review, editorial approval, and publication ethics requirements.</p>
+        </div>
+      </article>
+
+      <article class="bg-secondary/10 p-4 border border-secondary/20">
+        <div class="bg-base-100 p-5 h-full">
+          <h3 class="text-h6 text-secondary font-montserrat font-bold leading-tight mb-4">Extended Paper Policy</h3>
+          <p class="text-body text-base-content/90 leading-relaxed text-justify">Authors invited to submit extended versions of conference papers must ensure substantial technical extension beyond the conference version. The extended manuscript should include additional literature review, expanded methodology, deeper analysis, additional results, improved validation, and a clear statement explaining how the journal version differs from the conference paper.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>

@@ -46,7 +46,7 @@ export const PAGES = {
         path: "/peer-review-publication-ethics",
         title: "Peer Review and Publication Ethics",
         viewFile: "peer_review_and_publication_ethics",
-        navLabel: "Peer Review & Ethics",
+        navLabel: "Peer Review and Publication Ethics",
     },
     IMPORTANT_DATES: {
         name: "important_dates",

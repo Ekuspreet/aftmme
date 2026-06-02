@@ -1,11 +1,63 @@
+<%
+dates = [
+  {
+    date: '15 July 2026;',
+    event: 'Abstract submission deadline:',
+    calendar_link: 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=AFTMME+2026+Abstract+Submission+Deadline&dates=20260715/20260716&details=Abstract+submission+deadline+for+AFTMME+2026&sf=true&output=xml'
+  },
+  {
+    date: '31 July 2026;',
+    event: 'Abstract acceptance notification:',
+    calendar_link: 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=AFTMME+2026+Abstract+Acceptance+Notification&dates=20260731/20260801&details=Abstract+acceptance+notification+for+AFTMME+2026&sf=true&output=xml'
+  },
+  {
+    date: '15 September 2026;',
+    event: 'Full paper submission deadline:',
+    calendar_link: 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=AFTMME+2026+Full+Paper+Submission+Deadline&dates=20260915/20260916&details=Full+paper+submission+deadline+for+AFTMME+2026&sf=true&output=xml'
+  },
+  {
+    date: '15 October 2026;',
+    event: 'First review decision:',
+    calendar_link: 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=AFTMME+2026+First+Review+Decision&dates=20261015/20261016&details=First+review+decision+for+AFTMME+2026&sf=true&output=xml'
+  },
+  {
+    date: '31 October 2026;',
+    event: 'Revised paper submission:',
+    calendar_link: 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=AFTMME+2026+Revised+Paper+Submission&dates=20261031/20261101&details=Revised+paper+submission+for+AFTMME+2026&sf=true&output=xml'
+  },
+  {
+    date: '19 - 20 November 2026;',
+    event: 'Conference presentation:',
+    calendar_link: 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=AFTMME+2026+Conference+Presentation&dates=20261119/20261121&details=Conference+presentation+for+AFTMME+2026&sf=true&output=xml'
+  },
+  {
+    date: '15 December 2026;',
+    event: 'Camera-ready submission for selected papers:',
+    calendar_link: 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=AFTMME+2026+Camera-ready+Submission&dates=20261215/20261216&details=Camera-ready+submission+for+selected+papers+for+AFTMME+2026&sf=true&output=xml'
+  },
+  {
+    date: 'January 2027 onward.',
+    event: 'Proceedings/special issue recommendation:',
+    calendar_link: 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=AFTMME+2026+Proceedings+Special+Issue+Recommendation&dates=20270101/20270102&details=Proceedings+special+issue+recommendation+for+AFTMME+2026&sf=true&output=xml'
+  }
+];
+%>
+
 <section class="bg-base-100 py-12 md:py-16">
-  <div class="container mx-auto px-4 md:max-w-4xl">
+  <div class="container mx-auto px-4 md:max-w-5xl">
     <div class="text-center mb-10">
       <%- include('../components/section_title', { text: 'Important Dates', level: "h2" }) %>
     </div>
 
-    <div class="prose max-w-none">
-      <p>Key deadlines (abstract submission, full paper, registration, notification) and conference dates will be listed here. Replace this text with the finalized schedule.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 p-3 md:p-0">
+      <% for( let i=0; i < dates.length; ++i ) { %>
+      <a href="<%= dates[i].calendar_link %>" target="_blank" rel="noopener noreferrer" class="timeline-item p-4 bg-secondary/10 border border-secondary/20 hover:bg-secondary/20 transition-colors">
+        <div class="text-center flex flex-col items-center">
+          <div class="text-h5 font-black text-secondary"><%= dates[i].event %></div>
+          <time class="font-montserrat text-h6 font-medium"><%= dates[i].date %></time>
+        </div>
+      </a>
+      <% } %>
     </div>
   </div>
 </section>

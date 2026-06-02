@@ -1,81 +1,7 @@
-<!-- Updated Tracks Information
-Track 1: Advanced Materials and Functional Performance
-(Engineering next-generation materials for superior performance
-and reliability | SDG 9, 12)
-Smart, functional, and adaptive materials 
-High-performance composites and lightweight systems 
-Nano-materials and advanced coatings 
-Tribological materials and applications 
-Shielding materials 
-Biomaterials and bio-inspired design 
-Materials for extreme environments 
-Material characterization and performance evaluation
-Track 2: Sustainable Materials & Energy Applications
-(Driving clean energy transitions through sustainable material
-innovations | SDG 7, 12, 13)
-Materials for batteries, supercapacitors, and storage systems 
-Materials for solar, hydrogen, and fuel cell technologies 
-Recyclable, biodegradable, and eco-friendly materials 
-Materials for thermal management and insulation 
-Low-carbon and environmentally compatible materials 
-Resource-efficient material development 
-Materials for clean energy infrastructure 
-Sustainable material lifecycle perspectives
-Track 3: Advanced Manufacturing & Production Systems
-(Transforming production through advanced, efficient, and
-scalable manufacturing | SDG 8, 9)
-Additive and hybrid manufacturing technologies 
-Advanced machining and material removal processes 
-Machining of hard, brittle, and difficult-to-cut materials 
-Non-conventional and high-precision manufacturing
-techniques 
-Micro and nano manufacturing systems 
-Metrology, inspection, and quality control in manufacturing 
-Tooling, tool wear, and surface integrity analysis 
-Production system integration and industrial case studies
- 
-Track 4: Intelligent Systems & Digital Engineering
-(Enabling intelligent, data-driven engineering through AI and
-digital technologies | SDG 9, 11)
-Artificial intelligence in engineering materials 
-Machine learning for process and system analysis 
-Digital twins and virtual system modeling 
-Data analytics and intelligent monitoring 
-Autonomous and robotic systems 
-Smart sensing and embedded intelligence 
-Cyber-physical systems and digital integration 
-Intelligent control and optimization systems
-Track 5: Industry 4.0, Industry 5.0 & Smart Infrastructure
-(Building connected, human-centric, and resilient industrial
-ecosystems | SDG 8, 9, 11) 
-IoT-enabled systems and smart factories 
-Smart cities and intelligent infrastructure 
-Human-machine collaboration 
-Digital supply chains and connected systems 
-Cyber security and resilient infrastructure 
-Augmented/Virtual Reality applications 
-Personalized and adaptive production 
-Sustainable and human-centric systems
-Track 6: Multidisciplinary Engineering, Energy Systems &
-Decision-Making
-(Empowering sustainable engineering decisions through data,
-analytics, and integration | SDG 7, 12, 13)
-Multi-Criteria Decision-Making (MCDM) 
-Decision support systems 
-Lifecycle assessment and sustainability evaluation 
-Energy system planning and optimization 
-Materials selection using decision models 
-Systems engineering and interdisciplinary applications 
-Policy, strategy, and innovation 
-Data-driven engineering decisions 
-
--->
-
-
 <% tracks = [
   {
-    track: "Advanced Materials and Functional Performance",
-    subtitle: "Engineering next-generation materials for superior performance and reliability | SDG 9, 12",
+    track: "Track 1: Advanced Materials and Functional Performance",
+    subtitle: "(Engineering next-generation materials for superior performance and reliability | SDG 9, 12)",
     topics: [
       "Smart, functional, and adaptive materials",
       "High-performance composites and lightweight systems",
@@ -88,8 +14,8 @@ Data-driven engineering decisions
     ]
   },
   {
-    track: "Sustainable Materials & Energy Applications",
-    subtitle: "Driving clean energy transitions through sustainable material innovations | SDG 7, 12, 13",
+    track: "Track 2: Sustainable Materials & Energy Applications",
+    subtitle: "(Driving clean energy transitions through sustainable material innovations | SDG 7, 12, 13)",
     topics: [
       "Materials for batteries, supercapacitors, and storage systems",
       "Materials for solar, hydrogen, and fuel cell technologies",
@@ -102,8 +28,8 @@ Data-driven engineering decisions
     ]
   },
   {
-    track: "Advanced Manufacturing & Production Systems",
-    subtitle: "Transforming production through advanced, efficient, and scalable manufacturing | SDG 8, 9",
+    track: "Track 3: Advanced Manufacturing & Production Systems",
+    subtitle: "(Transforming production through advanced, efficient, and scalable manufacturing | SDG 8, 9)",
     topics: [
       "Additive and hybrid manufacturing technologies",
       "Advanced machining and material removal processes",
@@ -116,8 +42,8 @@ Data-driven engineering decisions
     ]
   },
   {
-    track: "Intelligent Systems & Digital Engineering",
-    subtitle: "Enabling intelligent, data-driven engineering through AI and digital technologies | SDG 9, 11",
+    track: "Track 4: Intelligent Systems & Digital Engineering",
+    subtitle: "(Enabling intelligent, data-driven engineering through AI and digital technologies | SDG 9, 11)",
     topics: [
       "Artificial intelligence in engineering materials",
       "Machine learning for process and system analysis",
@@ -130,8 +56,8 @@ Data-driven engineering decisions
     ]
   },
   {
-    track: "Industry 4.0, Industry 5.0 & Smart Infrastructure",
-    subtitle: "Building connected, human-centric, and resilient industrial ecosystems | SDG 8, 9, 11",
+    track: "Track 5: Industry 4.0, Industry 5.0 & Smart Infrastructure",
+    subtitle: "(Building connected, human-centric, and resilient industrial ecosystems | SDG 8, 9, 11)",
     topics: [
       "IoT-enabled systems and smart factories",
       "Smart cities and intelligent infrastructure",
@@ -144,8 +70,8 @@ Data-driven engineering decisions
     ]
   },
   {
-    track: "Multidisciplinary Engineering, Energy Systems & Decision-Making",
-    subtitle: "Empowering sustainable engineering decisions through data, analytics, and integration | SDG 7, 12, 13",
+    track: "Track 6: Multidisciplinary Engineering, Energy Systems & Decision-Making",
+    subtitle: "(Empowering sustainable engineering decisions through data, analytics, and integration | SDG 7, 12, 13)",
     topics: [
       "Multi-Criteria Decision-Making (MCDM)",
       "Decision support systems",
@@ -157,15 +83,7 @@ Data-driven engineering decisions
       "Data-driven engineering decisions"
     ]
   }
-];
-
-submission_links = [
-  { label: "Online Abstract Submission", href: "https://forms.gle/tciEuiCpBg3o4dWA8" },
-  { label: "Online Manuscript Submission", href: "https://forms.gle/T2D1m4yqLJN3muPv6" },
-  { label: "Abstract Template", href: "https://tinyurl.com/aftmme26-template-abstract" },
-  { label: "Manuscript Template", href: "https://tinyurl.com/aftmme26-template-manuscript" }
-];
-%>
+]; %>
 
 <section class="bg-base-100 py-12 md:py-16">
   <div class="container mx-auto px-4 md:max-w-5xl">
@@ -180,9 +98,7 @@ submission_links = [
           <h3 class="text-h6 text-secondary font-montserrat font-bold leading-tight">
             <%= tracks[index].track %>
           </h3>
-          <% if (tracks[index].subtitle) { %>
           <p class="text-sm text-secondary/80 italic mt-2"><%= tracks[index].subtitle %></p>
-          <% } %>
         </div>
 
         <% for (let i = 0; i < tracks[index].topics.length; i++) { %>
