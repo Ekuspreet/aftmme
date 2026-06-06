@@ -1,24 +1,27 @@
 <%
 speakers = [
-  "Dr. Satya Prakash, Ex-Emeritus Professor, IIT Roorkee",
-  "Dr. Prashant Kumar Chaurasia, University West, Sweden",
-  "Dr. Tanmay Tiwari, The University of Akron",
-  "Dr. Nguyen Van Toan, Tohuku University, Japan",
-  "Prof. Kallol Mondal, IIT Kanpur",
-  "Prof. Pardeep Dixit, IIT Bombay",
-  "Dr. Buta Singh Sidhu, DBU",
-  "Dr. Sehijpal Singh, GNDEC, Ludhiana",
-  "Dr. Harpreet Singh, IIT Ropar",
-  "Dr. Ravikant, IIT Ropar"
+  { name: "Dr. Satya Prakash", affiliation: "Ex-Emeritus Professor, IIT Roorkee", area: "Surface engineering, coatings, and materials performance" },
+  { name: "Dr. Prashant Kumar Chaurasia", affiliation: "University West, Sweden", area: "Advanced manufacturing and materials engineering" },
+  { name: "Dr. Tanmay Tiwari", affiliation: "The University of Akron", area: null },
+  { name: "Dr. Nguyen Van Toan", affiliation: "Tohuku University, Japan", area: null },
+  { name: "Prof. Kallol Mondal", affiliation: "IIT Kanpur", area: null },
+  { name: "Prof. Pardeep Dixit", affiliation: "IIT Bombay", area: null },
+  { name: "Dr. Buta Singh Sidhu", affiliation: "DBU", area: null },
+  { name: "Dr. Sehijpal Singh", affiliation: "GNDEC, Ludhiana", area: null },
+  { name: "Dr. Harpreet Singh", affiliation: "IIT Ropar", area: null },
+  { name: "Dr. Ravikant", affiliation: "IIT Ropar", area: null }
 ];
 %>
 
 <section class="bg-base-100 py-12 md:py-16">
   <div class="container mx-auto px-4 md:max-w-5xl">
     <div class="text-center">
-      <%- include('../components/section_title', { text: 'Keynote Speakers', level: 'h2' }) %>
+      <%- include('../components/section_title', { text: 'Invited Speakers', level: 'h2' }) %>
       <p class="text-justify text-body">
         AFTMME 2026 will feature eminent researchers, academicians, and leaders from mechanical and materials engineering.
+      </p>
+      <p class="text-justify text-body mt-3">
+        Detailed speaker profiles and keynote lecture titles will be updated after confirmation from the invited speakers.
       </p>
     </div>
 
@@ -26,7 +29,11 @@ speakers = [
       <% speakers.forEach(function(speaker){ %>
       <article class="bg-secondary/10 border border-secondary/20 p-4">
         <div class="bg-white/90 border-l-4 border-secondary/40 p-4 h-full">
-          <p class="text-body text-base-content/90 font-semibold"><%= speaker %></p>
+          <h3 class="text-h6 text-secondary font-montserrat font-bold mb-2"><%= speaker.name %></h3>
+          <p class="text-body text-base-content/90"><%= speaker.affiliation %></p>
+          <% if (speaker.area) { %>
+          <p class="text-body text-base-content/90 mt-2"><strong>Area:</strong> <%= speaker.area %></p>
+          <% } %>
         </div>
       </article>
       <% }) %>

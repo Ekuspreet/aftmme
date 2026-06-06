@@ -40,26 +40,30 @@ important_dates = [
 
 fees = [
   {
-    delegate: "Academician and R&D",
-    international: { somme: "350 USD", non: "500 USD" },
-    national: { somme: "2000 INR", non: "3000 INR" }
+    category: "Academician and R&D",
+    internationalSomme: "USD 350",
+    internationalNonSomme: "USD 500",
+    nationalSomme: "INR 2000",
+    nationalNonSomme: "INR 3000"
   },
   {
-    delegate: "Students and Research Scholars",
-    international: { somme: "250 USD", non: "350 USD" },
-    national: { somme: "1000 INR", non: "1500 INR" }
+    category: "Students and Research Scholars",
+    internationalSomme: "USD 250",
+    internationalNonSomme: "USD 350",
+    nationalSomme: "INR 1000",
+    nationalNonSomme: "INR 1500"
   },
   {
-    delegate: "Corporate and Industrial",
-    international: { somme: "500 USD", non: "700 USD" },
-    national: { somme: "10000 INR", non: "12000 INR" }
+    category: "Corporate and Industrial",
+    internationalSomme: "USD 500",
+    internationalNonSomme: "USD 700",
+    nationalSomme: "INR 10000",
+    nationalNonSomme: "INR 12000"
   }
 ];
 
 notes = [
-  "Additional INR 500 and USD 50 in the respective category will be applicable after the early bird dates.",
-  "At least one author of the accepted paper has to register for presentation.",
-  "Participants can register for the conference online using the registration link."
+  "An additional fee of INR 500 or USD 50 will be applicable after the early bird registration deadline. At least one author of each accepted paper must register and present the paper."
 ];
 %>
 
@@ -113,25 +117,21 @@ notes = [
           <table class="table table-sm w-full">
             <thead>
               <tr>
-                <th rowspan="2" class="text-body">Delegates</th>
-                <th colspan="2" class="text-body text-center">International</th>
-                <th colspan="2" class="text-body text-center">National</th>
-              </tr>
-              <tr>
-                <th class="text-body">SOMME Members</th>
-                <th class="text-body">Non-SOMME Members</th>
-                <th class="text-body">SOMME Members</th>
-                <th class="text-body">Non-SOMME Members</th>
+                <th class="text-body">Category</th>
+                <th class="text-body">International SOMME Members</th>
+                <th class="text-body">International Non-SOMME Members</th>
+                <th class="text-body">National SOMME Members</th>
+                <th class="text-body">National Non-SOMME Members</th>
               </tr>
             </thead>
             <tbody>
               <% fees.forEach(function(row){ %>
               <tr>
-                <td class="text-body font-semibold"><%= row.delegate %></td>
-                <td class="text-body"><%= row.international.somme %></td>
-                <td class="text-body"><%= row.international.non %></td>
-                <td class="text-body"><%= row.national.somme %></td>
-                <td class="text-body"><%= row.national.non %></td>
+                <td class="text-body font-semibold"><%= row.category %></td>
+                <td class="text-body"><%= row.internationalSomme %></td>
+                <td class="text-body"><%= row.internationalNonSomme %></td>
+                <td class="text-body"><%= row.nationalSomme %></td>
+                <td class="text-body"><%= row.nationalNonSomme %></td>
               </tr>
               <% }) %>
             </tbody>
@@ -149,10 +149,7 @@ notes = [
       <div class="bg-base-100 p-5">
         <h2 class="text-h5 font-bold text-secondary font-montserrat text-center mb-6">Manuscript and Publication Notes</h2>
         <div class="grid gap-3">
-          <p class="text-body bg-secondary/5 p-3 border-l-4 border-secondary/40">Conference acceptance, presentation, and registration do not
-            automatically imply publication. Papers recommended for proceedings
-            or special issue consideration will undergo additional editorial and
-            peer-review checks according to publisher or journal requirements.</p>
+          <p class="text-body bg-secondary/5 p-3 border-l-4 border-secondary/40">Selected full-length papers may be recommended for publication subject to peer review, plagiarism screening, technical quality, publisher approval, formatting compliance, and publication ethics requirements. Acceptance for presentation at the conference does not automatically guarantee publication.</p>
           <p class="text-body bg-secondary/5 p-3 border-l-4 border-secondary/40">Manuscript length: 6–8 pages for proceedings paper, or as per publisher template.</p>
           <p class="text-body bg-secondary/5 p-3 border-l-4 border-secondary/40">Similarity limit: preferably below 15–20%, excluding references, depending on publisher policy.</p>
           <p class="text-body bg-secondary/5 p-3 border-l-4 border-secondary/40">Template: Springer proceedings template, if LNME proposal is approved.</p>

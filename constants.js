@@ -25,7 +25,7 @@ export const PAGES = {
         path: "/cfp",
         title: "Call for Papers",
         viewFile: "cfp",
-        navLabel: "Call For Papers",
+        navLabel: "Call for Papers",
     },
     PUBLICATION_OPPORTUNITIES: {
         name: "publication_opportunities",
@@ -74,7 +74,7 @@ export const PAGES = {
         path: "/committees",
         title: "Committees",
         viewFile: "committees",
-        navLabel: "Committee",
+        navLabel: "Committees",
     },
     SPONSORSHIP: {
         name: "sponsorship",
