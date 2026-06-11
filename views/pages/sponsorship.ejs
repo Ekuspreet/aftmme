@@ -1,19 +1,19 @@
 <%
 contacts = [
-  { name: "Dr. Rakesh Bhatia", role: "Organizing Secretary", phone: "+91-9988096160" },
-  { name: "Dr. Chamkaur Jindal", role: "Organizing Secretary", phone: "+91-8427666994" },
-  { name: "Dr. Raman Kumar Sehgal", role: "Organizing Secretary", phone: "+91-9855100530" }
+  { name: "Dr. Rakesh Bhatia", phone: "+91-9988096160" },
+  { name: "Dr. Chamkaur Jindal", phone: "+91-8427666994" },
+  { name: "Dr. Raman Kumar Sehgal", phone: "+91-9855100530" }
 ];
 %>
 
 <section class="bg-base-100 py-12 md:py-16">
   <div class="container mx-auto px-4 md:max-w-5xl">
-  <div class="text-center">
-    <%- include('../components/section_title', { text: 'Sponsorship', level: 'h2' }) %>
-    <p class="text-justify text-body">
-      AFTMME 2026 brings together academicians, researchers, practising engineers, industrialists, and start-up professionals working in mechanical and materials engineering.
-    </p>
-  </div>
+    <div class="text-center">
+      <%- include('../components/section_title', { text: 'Sponsorship', level: 'h2' }) %>
+      <p class="text-justify text-body">
+        AFTMME 2026 brings together academicians, researchers, practising engineers, industrialists, and start-up professionals working in mechanical and materials engineering.
+      </p>
+    </div>
 
     <div class="grid md:grid-cols-3 gap-4 mt-10">
       <article class="bg-secondary/10 p-4 border border-secondary/20">
@@ -46,7 +46,6 @@ contacts = [
           <% contacts.forEach(function(person){ %>
           <div class="p-4 bg-secondary/10 border-l-4 border-secondary/30">
             <p class="text-body font-semibold text-base-content/90"><%= person.name %></p>
-            <p class="text-body text-base-content/70"><%= person.role %></p>
             <p class="text-body font-semibold text-secondary mt-2"><a href="tel:<%= person.phone %>" class="link link-secondary"><%= person.phone %></a></p>
           </div>
           <% }) %>
