@@ -1,0 +1,129 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "corporate";
+  default: false;
+  prefersdark: false;
+  color-scheme: "light";
+
+  --color-base-100: #fbfefd;
+  --color-base-200: #edf7f5;
+  --color-base-300: #d6ebe7;
+  --color-base-content: #123b3a;
+
+  --color-primary: #e88928;
+  --color-primary-content: #fffaf5;
+
+  --color-secondary: #168f80;
+  --color-secondary-content: #f4fffd;
+
+  --color-accent: #0f766e;
+  --color-accent-content: #f3fffd;
+
+  --color-neutral: #1d4f4a;
+  --color-neutral-content: #eaf8f5;
+
+  --color-info: #6cc9bb;
+  --color-info-content: #123b3a;
+
+  --color-success: #2fa572;
+  --color-success-content: #f5fffa;
+
+  --color-warning: #f4a340;
+  --color-warning-content: #4a2a00;
+
+  --color-error: #d95d6f;
+  --color-error-content: #fff7f8;
+
+  --radius-selector: 1rem;
+  --radius-field: 1rem;
+  --radius-box: 1.25rem;
+
+  --size-selector: 0.28125rem;
+  --size-field: 0.25rem;
+
+  --border: 1.5px;
+  --depth: 0;
+  --noise: 0;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+@theme{
+  --text-h1: clamp(2rem, 2.4vw, 2.75rem);
+--text-h2: clamp(1.6rem, 1.8vw, 2.25rem);
+--text-h3: clamp(1.35rem, 1.45vw, 1.75rem);
+--text-h4: clamp(1.2rem, 1.15vw, 1.5rem);
+--text-h5: clamp(1.075rem, 0.95vw, 1.25rem);
+--text-h6: clamp(1rem, 0.75vw, 1.125rem);
+--text-subtitle: clamp(0.95rem, 0.45vw, 1.075rem);
+--text-body: clamp(0.95rem, 0.35vw, 1.05rem);
+--text-small: clamp(0.8125rem, 0.25vw, 0.925rem);
+--text-caption: clamp(0.7rem, 0.2vw, 0.8rem);
+--text-tiny: clamp(0.625rem, 0.15vw, 0.7rem);
+
+
+  --font-montserrat : "Montserrat", sans-serif; 
+  --font-quicksand : "Quicksand", sans-serif;
+}
+
+:root {
+  --scroll-thumb: #168f80;
+}
+
+@layer utilities {
+  @keyframes gradient-rotate {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  @keyframes gradient-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .animate-gradient-spin {
+    display: inline-block;      /* needed for transform */
+    background: conic-gradient(from 0deg, #6b7280, #9ca3af, #d1d5db, #6b7280); 
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-spin 6s linear infinite;
+  }
+  .animate-gradient-rotate {
+    background-size: 200% 200%;
+    animation: gradient-rotate 4s linear infinite;
+  }
+}
+
+html {
+  font-family: "Quicksand", sans-serif;
+}
+/* Only thumb visible – Chrome/Edge/Safari */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-corner {
+  background: transparent !important;      /* force transparent track */
+  border: none !important;
+}
+
+/* Thumb only */
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb) !important; /* you control this color */
+  border-radius: 8px;
+  border: 2px solid transparent; /* prevents white halo */
+  background-clip: padding-box;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: auto;
+  scrollbar-color: var(--scroll-thumb) transparent;
+}
