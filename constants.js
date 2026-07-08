@@ -76,6 +76,13 @@ export const PAGES = {
         viewFile: "committees",
         navLabel: "Committees",
     },
+    ADVISORY_BOARD: {
+        name: "advisory_board",
+        path: "/advisory-board",
+        title: "Advisory Board",
+        viewFile: "advisory_board",
+        navLabel: "Advisory Board",
+    },
     SPONSORSHIP: {
         name: "sponsorship",
         path: "/sponsorship",

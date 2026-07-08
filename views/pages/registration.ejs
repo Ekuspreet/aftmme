@@ -41,24 +41,24 @@ important_dates = [
 fees = [
   {
     category: "Academician and R&D",
-    internationalSomme: "USD 350",
-    internationalNonSomme: "USD 500",
-    nationalSomme: "INR 2000",
-    nationalNonSomme: "INR 3000"
+    internationalSomme: "350 USD",
+    internationalNonSomme: "500 USD",
+    nationalSomme: "2000 INR",
+    nationalNonSomme: "3000 INR"
   },
   {
     category: "Students and Research Scholars",
-    internationalSomme: "USD 250",
-    internationalNonSomme: "USD 350",
-    nationalSomme: "INR 1000",
-    nationalNonSomme: "INR 1500"
+    internationalSomme: "250 USD",
+    internationalNonSomme: "350 USD",
+    nationalSomme: "1000 INR",
+    nationalNonSomme: "1500 INR"
   },
   {
     category: "Corporate and Industrial",
-    internationalSomme: "USD 500",
-    internationalNonSomme: "USD 700",
-    nationalSomme: "INR 10000",
-    nationalNonSomme: "INR 12000"
+    internationalSomme: "500 USD",
+    internationalNonSomme: "700 USD",
+    nationalSomme: "10000 INR",
+    nationalNonSomme: "12000 INR"
   }
 ];
 
@@ -114,24 +114,28 @@ notes = [
       <div class="bg-base-100 p-5">
         <h2 class="text-h5 font-bold text-secondary font-montserrat text-center mb-6">Registration Fee</h2>
         <div class="overflow-x-auto border border-base-300">
-          <table class="table table-sm w-full">
-            <thead>
+          <table class="table table-sm w-full text-center">
+            <thead class="bg-secondary text-secondary-content">
               <tr>
-                <th class="text-body">Category</th>
-                <th class="text-body">International SOMME Members</th>
-                <th class="text-body">International Non-SOMME Members</th>
-                <th class="text-body">National SOMME Members</th>
-                <th class="text-body">National Non-SOMME Members</th>
+                <th rowspan="2" class="text-body align-middle border border-base-300">Delegates</th>
+                <th colspan="2" class="text-body border border-base-300">International</th>
+                <th colspan="2" class="text-body border border-base-300">National</th>
+              </tr>
+              <tr>
+                <th class="text-body border border-base-300">SOMME Members</th>
+                <th class="text-body border border-base-300">Non-SOMME Members</th>
+                <th class="text-body border border-base-300">SOMME Members</th>
+                <th class="text-body border border-base-300">Non-SOMME Members</th>
               </tr>
             </thead>
             <tbody>
               <% fees.forEach(function(row){ %>
               <tr>
-                <td class="text-body font-semibold"><%= row.category %></td>
-                <td class="text-body"><%= row.internationalSomme %></td>
-                <td class="text-body"><%= row.internationalNonSomme %></td>
-                <td class="text-body"><%= row.nationalSomme %></td>
-                <td class="text-body"><%= row.nationalNonSomme %></td>
+                <td class="text-body font-semibold text-left md:text-center border border-base-300"><%= row.category %></td>
+                <td class="text-body border border-base-300"><%= row.internationalSomme %></td>
+                <td class="text-body border border-base-300"><%= row.internationalNonSomme %></td>
+                <td class="text-body border border-base-300"><%= row.nationalSomme %></td>
+                <td class="text-body border border-base-300"><%= row.nationalNonSomme %></td>
               </tr>
               <% }) %>
             </tbody>

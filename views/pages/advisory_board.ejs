@@ -1,0 +1,59 @@
+<%
+advisoryBoard = [
+  "Prof. C. Brendt, Swinburne University of Technology, Australia",
+  "Prof. Raman Singh, Monash University, Australia",
+  "Prof. Saurav Goel, Cranfield University, UK",
+  "Dr. Andrew Ang, Swinburne University of Technology, Australia",
+  "Prof. Francesco Lambiase, University of L'Aquila",
+  "Prof. Silvio Genna, University of Rome Tor Vergata",
+  "Dr. Tanvir Hussain, University of Nottingham, UK",
+  "Prof. Anish Roy, Loughborough University, UK",
+  "Prof. Amit Srivastava, University of Texas, US",
+  "Prof. Shrikrishna N Joshi, IIT, Guwahati",
+  "Prof. Uday S Dixit, IIT, Guwahati",
+  "Prof. Amitava Ghosh, IIT, Madras",
+  "Prof. Inderdeep Singh, IIT, Roorkee",
+  "Prof. Satyaki Roy, IIT, Kanpur",
+  "Prof. S. P. Singh, IIT, Delhi",
+  "Prof. Josemon Jacob, IIT, Delhi",
+  "Prof. Manas Das, IIT, Guwahati",
+  "Prof. Pankaj Biswas, IIT, Guwahati",
+  "Prof. Swarup Bag, IIT, Guwahati",
+  "Prof. S. K. Shukla, IIT (BHU), Varanasi",
+  "Prof. Kuldeep Singh Sagwan, Manipal University, Jaipur",
+  "Prof. Aman Mahajan, GNDU, Amritsar",
+  "Prof. V. S. Hans, PAU, Ludhiana",
+  "Prof. Rupinder Singh, NITTTR, Chandigarh",
+  "Prof. Parminderjit Singh, PEC, Chandigarh",
+  "Prof. Harpreet Kaur, Punjabi University, Patiala",
+  "Dr. Varun Sharma, IIT, Roorkee",
+  "Dr. Gurminder Singh, IIT, Bombay",
+  "Dr. G. S. Brar, NIT, Srinagar"
+];
+%>
+
+<section class="bg-base-100 py-12 md:py-16">
+  <div class="container mx-auto px-4 md:max-w-5xl">
+    <% if (advisoryBoard.length) { %>
+    <article class="bg-secondary/10 p-4 border border-secondary/20">
+      <h3 class="text-h6 text-secondary font-montserrat font-bold leading-tight mb-4">
+        Advisory Board
+      </h3>
+
+      <div class="grid md:grid-cols-2 gap-x-6">
+        <% for (let index = 0; index < advisoryBoard.length; index++) { %>
+        <p class="text-base-content/90 text-body mb-2">
+          <%= advisoryBoard[index] %>
+        </p>
+        <% } %>
+      </div>
+    </article>
+    <% } else { %>
+    <article class="bg-secondary/10 p-4 border border-secondary/20">
+      <div class="bg-base-100 p-5 border-l-4 border-secondary">
+        <p class="text-body text-base-content/90 leading-relaxed text-justify">Advisory Board details will be updated soon.</p>
+      </div>
+    </article>
+    <% } %>
+  </div>
+</section>

@@ -7,23 +7,23 @@
     },
     {
       title : "Society of Materials and Mechanical Engineers (SOMME)",  
-      about : ["Society of Materials and Mechanical Engineers (SOMME) has been founded and formed under the dynamic and prominent academicians Dr. Satya Prakash, Emeritus Professor, IIT Roorkee (India) as Patron of society and Prof. Buta Singh Sidhu, Ex. Vice Chancellor, MRSPTU, Bathinda (India) as President of society. The objective of the society is to promote research and development activities in the field of materials and mechanical engineering for the growth of society in this technical era. For more details, the society website <a class='link link-secondary' href='http://www.somme.in/' target='_blank'>http://www.somme.in/</a> can be visited."]
+      about : ["Society of Materials and Mechanical Engineers (SOMME) has been founded and formed under the dynamic leadership of prominent academicians Dr. Satya Prakash, Emeritus Professor, IIT Roorkee (India), as Patron of the society, and Prof. Buta Singh Sidhu, Vice Chancellor, Shobhit University, Gangoh, U.P. (India), as President of the society. The objective of the society is to promote research and development activities in the field of materials and mechanical engineering for the growth of society in this technical era. Additional details are available at the society's website: http://www.somme.in/"]
     },
   ] %>
 
 <section class="bg-base-100 py-12 md:py-16">
   <div class="container mx-auto px-4 md:max-w-5xl flex flex-col gap-8">
-  <% for( let index = 0; index < about.length; index++ ) { %>
-  <article class="bg-secondary/10 p-4 border border-secondary/20">
-    <div class="text-center mb-4">
-      <%- include('../components/section_title', { text: about[index].title, level: "h4" }) %>
-    </div>
-    <% for (let i = 0; i < about[index].about.length; i++) { %>
-    <p class="text-justify bg-base-100 p-4 text-base-content/90 text-body">
-      <%- about[index].about[i] %>
-    </p>
+    <% for( let index = 0; index < about.length; index++ ) { %>
+    <article class="bg-secondary/10 p-4 border border-secondary/20">
+      <div class="text-center mb-4">
+        <%- include('../components/section_title', { text: about[index].title, level: "h4" }) %>
+      </div>
+      <% for (let i = 0; i < about[index].about.length; i++) { %>
+      <p class="text-justify bg-base-100 p-4 text-base-content/90 text-body">
+        <%- about[index].about[i] %>
+      </p>
+      <% } %>
+    </article>
     <% } %>
-  </article>
-  <% } %>
   </div>
 </section>
